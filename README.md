@@ -3,12 +3,12 @@
 <p>Proyecto integrador CH41</p><br>
 <h4>Equipo 6</h4>
 <ul>
-Javier Cortes Vázquez.
-Ana Paulina Hurtado Miguel.
-Alexia Irais Mata Pérez.
-Alan García Vázquez.
-Diana Laura Zapoteco Tepec.
-Esdras Manuel Diaz Zavala.
-Brian Antonio Oseguera Mendoza.
-Jesus Riverol Torres.
+<li>Javier Cortes Vázquez.</li>
+<li>Ana Paulina Hurtado Miguel.</li>
+<li>Alexia Irais Mata Pérez.</li>
+<li>Alan García Vázquez.</li>
+<li>Diana Laura Zapoteco Tepec.</li>
+<li>Esdras Manuel Diaz Zavala.</li>
+<li>Brian Antonio Oseguera Mendoza.</li>
+<li>Jesus Riverol Torres.</li>
 </ul>
