@@ -27,14 +27,39 @@
         </div>
         <!-- Repite para cada persona -->
     </section>
-    <section>
+
+    <!--empiezan los formularios-->
+    <section class="formularios">
         <h2>Contacto</h2>
         <form action="/enviar-mensaje" method="post">
             <!-- Campos del formulario para enviar un mensaje -->
         </form>
-        <form action="/suscribirse" method="post">
-            <!-- Campos del formulario para suscribirse -->
-        </form>
+
+        <!-- Dejanos tu comentario -->
+        
+        <form action="/my-handling-form-page" method="post">
+            <fieldset>
+                <ul>
+                <li>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" id="mail" name="user_mail" />
+                </li>
+                <li>
+                    <label for="mail">Telefono:</label>
+                    <input type="tel" id="phone" name="user_phone" />
+                </li>
+                </ul>
+                <p>
+                    <label for="msg">comentario:</label>
+                    <textarea id="msg" id="msg" name="user_message"></textarea>
+                </p>
+            </fieldset>
+          </form>
+          
     </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
