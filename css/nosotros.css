@@ -1,16 +1,56 @@
-*{
-    background-color: transparent;
-}
+body{
+    background-color: #DA627D !important;
 
-.contactanos, .comentarios {
+}
+.form-coment-contact > * {
     display: flex;
     flex-direction: column;
-    border: 0.15rem solid black ;
-    border-radius: 3rem;
+    border: 0.5vw solid black ;
+    border-radius: 4vw;
     align-items: center;
-    margin: 2rem 1rem;
+    margin:2vw;
+    background-color: white;
+    color: #450920;
 }
 .contactanos > * , .comentarios > * {
-    margin: 1rem;
-    
+    margin: 3vw;
+}
+.contactanos a{
+    background-color: #E8E8E8;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #450920;
+    border: 0.15rem solid #450920;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+}
+form{
+    display: flex;
+    width: 90%;
+    margin: calc(10%/4);
+}
+
+form > *{
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+    margin: 2.5vw !important; 
+}
+.form-div{
+    width: 50%;
+}
+input{
+    margin: 2.5vw 0 !important;
+    border-radius: 0.5rem !important;
+    height: 30%;
+}
+button{
+    border-radius: 0.5rem !important;
+    height: 30%;
+}
+.vertical-line {
+    border-left: 0.1rem solid black; /* Cambia el grosor y el color de la línea según sea necesario */
+    height: 30vw; /* Ajusta la altura según tus necesidades */
+    margin-left: 2rem; /* Espacio desde el borde izquierdo */
+    width: 0.1rem;
 }
