@@ -1,0 +1,16 @@
+*{
+    background-color: transparent;
+}
+
+.contactanos, .comentarios {
+    display: flex;
+    flex-direction: column;
+    border: 0.15rem solid black ;
+    border-radius: 3rem;
+    align-items: center;
+    margin: 2rem 1rem;
+}
+.contactanos > * , .comentarios > * {
+    margin: 1rem;
+    
+}
