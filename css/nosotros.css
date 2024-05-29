@@ -1,36 +1,48 @@
 body{
-    background-color: #DA627D !important;
-
+    background-color: #F9DBBD !important;
 }
-.form-coment-contact > * {
-    display: flex;
-    flex-direction: column;
-    border: 0.5vw solid black ;
-    border-radius: 4vw;
-    align-items: center;
-    margin:2vw;
+/* <-----------------------------Tarjetas-----------------------------> */
+.card-holder{
     background-color: white;
-    color: #450920;
 }
-.contactanos > * , .comentarios > * {
-    margin: 3vw;
-}
-
 .imgPerfil{
     width: 60%;
     border-radius: 2rem;
     margin: 2rem auto;
 }
-
 .col-index {
     padding-top: 1%;
     padding-bottom: 1%;
 }
-
 .card {
     box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
 }
-
+.imgPerfil{
+    width: 60%;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+.col-index {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.card {
+    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
+}
+/* <-----------------Seccion contactanos y comentarios-------------------> */
+.form-coment-contact > * {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4vw;
+    align-items: center;
+    margin:2vw;
+    background-color: #F6F0E9;
+    color: #450920;
+    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33)
+}
+.contactanos > * , .comentarios > * {
+    margin: 3vw;
+}
 .contactanos a{
     background-color: #E8E8E8;
     font-size: 1.5rem;
@@ -56,12 +68,19 @@ form > *{
     width: 50%;
 }
 input{
-    margin: 2.5vw 0 !important;
+    margin: 2vw 0 !important;
     border-radius: 0.5rem !important;
     height: 30%;
 }
+input::placeholder, textarea::placeholder{
+    color: #DA627D;
+    font-size: 3vw;
+}
 button{
     border-radius: 0.5rem !important;
+    background-color: #A53860;
+    color: white;
+    font-size: 3.5vw !important;
     height: 30%;
 }
 .vertical-line {
@@ -70,17 +89,4 @@ button{
     margin-left: 2rem; 
     width: 0.1rem;
 }
-.imgPerfil{
-    width: 60%;
-    border-radius: 2rem;
-    margin: 2rem auto;
-}
 
-.col-index {
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-.card {
-    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
-}
