@@ -1,0 +1,125 @@
+/* <-----------------------------Tarjetas-----------------------------> */
+.card-holder {
+    background-color: white;
+}
+
+.imgPerfil {
+    width: 60%;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+
+.col-index {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.card {
+    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
+}
+
+.imgPerfil {
+    width: 60%;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+
+.col-index {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.tarjetas-contacto {
+    background-color: #F9DBBD;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.cards-form-style {
+    background-color: #F6F0E9;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #450920;
+}
+
+.contacto {
+    background-color: #E8E8E8;
+    border-radius: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 2px 2px 2px 2px rgba(10, 10, 10, 0.33);
+
+}
+
+.comentario-form {
+    background-color: #F6F0E9;
+    border: solid 0.01rem #450920;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 36%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.comentario-form::placeholder {
+    color: #DA627D;
+    opacity: 1;
+}
+
+.comentario-formText {
+    background-color: #F6F0E9;
+    border: solid 0.01rem #450920;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.comentario-formText::placeholder {
+    color: #DA627D;
+    opacity: 1;
+}
+
+.btn-comentario {
+    background-color: #A53860;
+    color: white;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.footer-section {
+    background-color: #DA627D;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: black;
+}
+
+.seccion-tarjetas {
+    background-color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.vinculo1{
+    width: 80%;
+    padding-top: ;
+    padding-bottom: 2%;
+    
+}
+.vinculo2{
+    width: 70%;
+    padding-top: 11%;
+    padding-bottom: 2%;
+    
+}
