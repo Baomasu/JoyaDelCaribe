@@ -6,7 +6,7 @@ a{
     color: #450920 !important;
 }
 h2{
-    font-size: 3vw !important;
+    font-size: 4vw !important;
 }
 
 /* <-----------------------------Tarjetas-----------------------------> */
@@ -53,10 +53,13 @@ h2{
 }
 .contactanos a{
     background-color: #E8E8E8;
-    font-size: 1.5rem;
-    border: 0.15rem solid #450920;
-    padding: 0.5rem;
+    font-size: 4vw;
+    border: 0.5vw solid #450920;
+    padding: 2vw;
     border-radius: 0.8rem;
+}
+.contactanos h4{
+    font-size: 3.5vw;
 }
 form{
     display: flex;
@@ -129,10 +132,17 @@ footer > *{
 }
 /* Media queries para teléfonos */
 @media (max-width: 600px) {
-    footer{
+    footer, .vertical-line{
         display: none;
     }
-
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form > *{
+        width: 90%;
+    }
 }
 
 /* Media queries para tablets */
