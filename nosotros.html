@@ -144,25 +144,28 @@
                 <h2>Contáctanos</h2>
                 <h4>Te brindamos atención personalizada</h4>
                 <a href="https://github.com/Baomasu/JoyaDelCaribe">Repositorio oficial del proyecto</a>
-            </div>
-            <div>
-                <h2>Déjanos tu comentario: </h2>
-                <form action="">
-                    <div class="form-div">
-                        <input type="text" placeholder="Nombre: ">
-                        <input type="email" placeholder="Correo: ">
-                        <input type="tel" placeholder="Teléfono: ">
-                        <button>Enviar</button>
-                        <br>
-                    </div>
-                    <textarea name="coment" placeholder="Comentario"></textarea>
-                </form>
-            </div>
-        </section>
+        </div>
+        <div class="comentarios">
+            <h2>Déjanos tu comentario: </h2>
+            <form action="/my-handling-form-page" method="post">
+                <fieldset>
+                <div class="form-div">
+                    <label for="name">Nombre:</label>
+                    <input type="text" placeholder="Nombre: ">
+                    <label for="mail">Correo electrónico:</label>
+                    <input type="email" placeholder="Correo: ">
+                    <label for="mail">Telefono:</label>
+                    <input type="tel" placeholder="Teléfono: ">
+                    <label for="msg">comentario:</label>
+                    <button>Enviar</button>
+                    <br>   
+                </div>
+                <textarea name="coment" placeholder="Comentario"></textarea>
+            </fieldset>
+            </form>
+        </div>
+    </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>
