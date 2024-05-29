@@ -1,20 +1,3 @@
-body{
-    background-color: #DA627D !important;
-
-}
-.form-coment-contact > * {
-    display: flex;
-    flex-direction: column;
-    border: 0.5vw solid black ;
-    border-radius: 4vw;
-    align-items: center;
-    margin:2vw;
-    background-color: white;
-    color: #450920;
-}
-.contactanos > * , .comentarios > * {
-    margin: 3vw;
-}
 
 .imgPerfil{
     width: 60%;
@@ -40,53 +23,11 @@ body{
     padding: 0.5rem;
     border-radius: 0.8rem;
 }
-form{
-    display: flex;
-    width: 90%;
-    margin: calc(10%/4);
-}
-
-form > *{
-    width: 50%;
-    display: flex; 
-    flex-direction: column;
-    margin: 2.5vw !important; 
-}
-.form-div{
-    width: 50%;
-}
-input{
-    margin: 2.5vw 0 !important;
-    border-radius: 0.5rem !important;
-    height: 30%;
-}
-button{
-    border-radius: 0.5rem !important;
-    height: 30%;
-}
-.vertical-line {
-    border-left: 0.1rem solid black; 
-    height: 40vw;
-    margin-left: 2rem; 
-    width: 0.1rem;
-}
-.imgPerfil{
-    width: 60%;
-    border-radius: 2rem;
-    margin: 2rem auto;
-}
-
-.col-index {
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-.card {
-    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
-}
 
 .seccion-tarjetas {
     background-color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .vinculo1{
