@@ -13,8 +13,28 @@ body{
     color: #450920;
 }
 .contactanos > * , .comentarios > * {
+<<<<<<< HEAD
     margin: 3vw;
+=======
+    margin: 3vw;   
+>>>>>>> 3b2a644f1d5f7ee340fe54f396f52c9ebc9ce30e
 }
+
+.imgPerfil{
+    width: 60%;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+
+.col-index {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.card {
+    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
+}
+
 .contactanos a{
     background-color: #E8E8E8;
     font-size: 1.5rem;
