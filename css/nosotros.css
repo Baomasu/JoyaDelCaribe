@@ -1,6 +1,14 @@
 body{
     background-color: #F9DBBD !important;
 }
+a{
+    text-decoration: none !important;
+    color: #450920 !important;
+}
+h2{
+    font-size: 3vw !important;
+}
+
 /* <-----------------------------Tarjetas-----------------------------> */
 .card-holder{
     background-color: white;
@@ -46,8 +54,6 @@ body{
 .contactanos a{
     background-color: #E8E8E8;
     font-size: 1.5rem;
-    text-decoration: none;
-    color: #450920;
     border: 0.15rem solid #450920;
     padding: 0.5rem;
     border-radius: 0.8rem;
@@ -89,4 +95,60 @@ button{
     margin-left: 2rem; 
     width: 0.1rem;
 }
+footer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 20vw;
+    background-color: #DA627D;
+    border-top: 3vw solid white;
+}
+footer > *{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    color: #450920;
+}
+.enlaces{
+    width: 10%;
+}
+.RRSS{
+    align-items: center;
+    width: 80%;    
+}
+.RRSS a{
+    margin: 3vw 2vw;
+}
+.RRSS p{
+    text-align: center ;
+    margin-top: 5vw;
+    margin-bottom: 0;
+}
+/* Media queries para teléfonos */
+@media (max-width: 600px) {
+    footer{
+        display: none;
+    }
 
+}
+
+/* Media queries para tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+    .RRSS a{
+        margin: 0.3vw 0.2vw;
+        font-size: 2vw !important;
+    }
+    .enlaces a{
+        margin: 0.2vw ;
+        font-size: 2vw !important;
+    }
+    .RRSS p{
+        text-align: center ;
+        margin-top: 1.5vw;
+        margin-bottom: 0;
+        font-size: 2vw;
+    }
+}
