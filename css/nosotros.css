@@ -84,3 +84,7 @@ button{
 .card {
     box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
 }
+
+.seccion-tarjetas {
+    background-color: white;
+}
