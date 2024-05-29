@@ -88,3 +88,16 @@ button{
 .seccion-tarjetas {
     background-color: white;
 }
+
+.navbar-2{
+    background-color: F9DBBD;
+    padding-top: 1%;
+    padding-bottom: 1%;
+   
+}
+
+.enlacenavbar{
+    text-decoration: none ;
+    color: black;
+    font-weight:lighter;
+}
