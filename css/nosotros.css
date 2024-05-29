@@ -50,7 +50,7 @@ button{
 }
 .vertical-line {
     border-left: 0.1rem solid black; 
-    height: 30vw;
+    height: 40vw;
     margin-left: 2rem; 
     width: 0.1rem;
 }
