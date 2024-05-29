@@ -49,8 +49,22 @@ button{
     height: 30%;
 }
 .vertical-line {
-    border-left: 0.1rem solid black; /* Cambia el grosor y el color de la línea según sea necesario */
-    height: 30vw; /* Ajusta la altura según tus necesidades */
-    margin-left: 2rem; /* Espacio desde el borde izquierdo */
+    border-left: 0.1rem solid black; 
+    height: 30vw;
+    margin-left: 2rem; 
     width: 0.1rem;
+}
+.imgPerfil{
+    width: 60%;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+
+.col-index {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.card {
+    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
 }
