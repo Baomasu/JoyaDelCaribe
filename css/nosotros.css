@@ -85,14 +85,19 @@
 }
 
 .footer-section {
-    background-color: #DA627D;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    background-color: #A53860;
+    color: #F6F0E9;
 }
 
 .footer-section a {
     text-decoration: none;
-    color: black;
+    color: #F6F0E9;
+
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #450920;
 }
 
 .seccion-tarjetas {
