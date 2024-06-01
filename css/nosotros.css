@@ -1,4 +1,9 @@
 /* <-----------------------------Tarjetas-----------------------------> */
+/* fuente */
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .card-holder {
     background-color: white;
 }
@@ -14,9 +19,39 @@
     padding-bottom: 1rem;
 }
 
-.card {
-    box-shadow: 4px 4px 4px 4px rgba(10, 10, 10, 0.33);
+.card-style {
+    box-shadow: 2px 2px 2px 2px rgba(10, 10, 10, 0.22);
+    background: white;
+    padding: 2rem;
+    transition: 0.3s;
 }
+
+.card-style:hover {
+    background-color: #F6F0E9;
+    box-shadow: 2px 2px 2px 2px rgb(218, 98, 125, 0.22);
+}
+
+.desc-txt{
+    height: 5rem;
+    word-wrap: break-word;
+    text-align: justify;
+    display: inline-block;
+}
+
+.bt-read-more{
+    background-color: #DA627D;
+    opacity: 44%;
+    color: white;
+    border: none;
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin-bottom: 0.8rem;
+    margin-top: 0.3rem;
+}
+
 
 
 .tarjetas-contacto {
@@ -120,8 +155,9 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.s-nos{
+.nos{
     font-size: large;
+    text-align: justify;
 }
 .img-bg{
     padding-bottom: 10rem;
