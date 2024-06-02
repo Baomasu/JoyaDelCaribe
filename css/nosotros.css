@@ -86,6 +86,10 @@
 
 .footer-section {
     background-color: #A53860;
+    /* Aplicando un gradiente lineal como imagen de fondo*/
+    /* linear-gradient es una función que crea una imagen de gradiente lineal. */
+    /* to right es una dirección que indica que el gradiente se aplica de izquierda a derecha. */
+    /* background-image: linear-gradient(to right, #a53860, #983257, #8c2c4f, #7f2646, #73203e); */
     color: #F6F0E9;
 }
 
@@ -98,6 +102,10 @@
 
 .footer-section a:hover {
     color: #450920;
+}
+
+.footerPago {
+    background-color: #F6F0E9;
 }
 
 .seccion-tarjetas {
