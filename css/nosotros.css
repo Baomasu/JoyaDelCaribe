@@ -1,7 +1,7 @@
 /* <-----------------------------Tarjetas-----------------------------> */
 /* fuente */
-*{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .card-holder {
@@ -31,25 +31,31 @@
     box-shadow: 2px 2px 2px 2px rgb(218, 98, 125, 0.22);
 }
 
-.desc-txt{
-    height: 5rem;
+.desc-txt {
     word-wrap: break-word;
     text-align: justify;
     display: inline-block;
 }
 
-.bt-read-more{
+.bt-read-more {
     background-color: #DA627D;
     opacity: 44%;
     color: white;
     border: none;
-    width: 4rem;
-    height: 2rem;
-    font-size: 0.7rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
     border-radius: 0.5rem;
-    padding: 0.3rem;
-    margin-bottom: 0.8rem;
-    margin-top: 0.3rem;
+    transition: 0.3s;
+}
+
+.bt-read-more:hover{
+    background-color: #DA627D;
+    opacity: 66%;
+    color: white;
+    border: none;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
 }
 
 
@@ -111,12 +117,26 @@
 
 .btn-comentario {
     background-color: #A53860;
+    opacity: 100%;
     color: white;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.btn-comentario:hover {
+    background-color: #A53860;
+    opacity: 90%;
+    color: white;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px 2px rgb(246, 240, 233, 0.44);
 }
 
 .footer-section {
@@ -136,38 +156,42 @@
     padding-bottom: 5rem;
 }
 
-.vinculo1{
+.vinculo1 {
     width: 80%;
     padding-top: 1%;
     padding-bottom: 2%;
-    
+
 }
-.vinculo2{
+
+.vinculo2 {
     width: 70%;
     padding-top: 12%;
     padding-bottom: 2%;
-    
+
 }
 
-.equipo{
-    background-color: #FFA5AB ;
+.equipo {
+    background-color: #FFA5AB;
     color: white;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.nos{
+
+.nos {
     font-size: large;
     text-align: justify;
 }
-.img-bg{
+
+.img-bg {
     padding-bottom: 10rem;
     padding-top: 10rem;
     background-color: white;
     background-image: url("/src/assets/profilePictures/img_titulo.jpg");
-    background-size: 80% ;
-    background-position: 30% ;
+    background-size: 80%;
+    background-position: 30%;
 }
-#descripcion{
+
+#descripcion {
     display: flex;
 }
 
@@ -176,52 +200,52 @@
     padding-top: 7rem;
 }
 
-.navbar-1{
+.navbar-1 {
     background-color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
-   
 }
 
-.buscarCaja{
+.buscarCaja {
     border-radius: 2rem 0rem 0rem 2rem !important;
     border: 1px solid #A53860 !important;
 }
 
-.buscarBoton{
+.buscarBoton {
     border-radius: 0px 20px 20px 0px !important;
     background: #FFA5AB !important;
     /* width: 107px; */
 }
-           
-.navbar-2{
+
+.navbar-2 {
     background-color: F9DBBD;
     padding-top: 1%;
     padding-bottom: 1%;
-   
+
 }
 
-.enlacenavbar{
-    text-decoration: none ;
+.enlacenavbar {
+    text-decoration: none;
     color: black;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 @media(max-width: 767px) {
-    .navbarEscritorio{
+    .navbarEscritorio {
         display: none;
     }
-    
-    .navbarBuscador{
+
+    .navbarBuscador {
         display: none;
     }
-    .img-bg{
+
+    .img-bg {
         display: none;
     }
 }
 
-@media(min-width:767px){
-    .navbarMobil{
+@media(min-width:767px) {
+    .navbarMobil {
         display: none;
     }
 }
