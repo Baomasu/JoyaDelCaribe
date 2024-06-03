@@ -182,6 +182,12 @@
     .img-bg{
         display: none;
     }
+    .navbar-2{
+        display: none;
+    }
+    .dropdown-menu{
+        background-color: #F9DBBD !important;
+    }
 }
 
 @media(min-width:767px){
