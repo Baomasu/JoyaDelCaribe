@@ -28,7 +28,7 @@ btnDiana.addEventListener("click", function (event) {
         btnState[0] = false;
     } else {
         diana.innerHTML = `
-        <p class="desc-txt" style="height: 8.7rem;">Desarrolladora Full Stack, con intereses de integrarme al mundo del desarrollo web y las TI aprovechando mis habilidades adquiridas a lo largo de mi formación académica.</p>`;
+        <p class="desc-txt" style="height: 9rem;">Desarrolladora Full Stack, con intereses de integrarme al mundo del desarrollo web y las TI aprovechando mis habilidades adquiridas a lo largo de mi formación académica.</p>`;
         //console.log("texto largo");
         btnState[0] = true;
     }
@@ -44,7 +44,7 @@ btnEsdras.addEventListener("click", function (event) {
         btnState[1] = false;
     } else {
         esdras.innerHTML = `
-        <p class="desc-txt" style="height: 8.7rem;">El desarrollo web me ha permitido desarrollar persistencia y resposabilidad personal al buscar soluciones creativas mediante la programación y el diseño.</p>`;
+        <p class="desc-txt" style="height: 9rem;">El desarrollo web me ha permitido desarrollar persistencia y resposabilidad personal al buscar soluciones creativas mediante la programación y el diseño.</p>`;
         //console.log("texto largo");
         btnState[1] = true;
     }
@@ -60,7 +60,7 @@ btnAlan.addEventListener("click", function (event) {
         btnState[2] = false;
     } else {
         alan.innerHTML = `
-        <p class="desc-txt"style="height: 8.7rem;">Desarrollador Java Full Stack Junior con un fuerte interés en la tecnología y la programación, busco aportar mi experiencia y habilidades al éxito de proyectos innovadores.</p>`;
+        <p class="desc-txt"style="height: 9rem;">Desarrollador Java Full Stack Junior con un fuerte interés en la tecnología y la programación, busco aportar mi experiencia y habilidades al éxito de proyectos innovadores.</p>`;
         //console.log("texto largo");   
         btnState[2] = true;
     }
