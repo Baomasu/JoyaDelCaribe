@@ -15,14 +15,14 @@
         <section class="container">
             <div class="row">
                 <div class="col-2 navbarEscritorio">
-                    <a href=""><img src="src/assets/profilePictures/Logo.png" alt="" class="" style="height: 3rem;"></a>
+                    <a href=""><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
                 </div>
-                <div class="col-10  navbarMobil">
-                    <a href=""><img src="src/assets/profilePictures/Logo.png" alt="" class="" style="height: 3rem;"></a>
+                <div class="col-2  navbarMobil">
+                    <a href=""><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
                 </div>
 
                 <div class="col-8 navbarBuscador">
-                    <div class="input-group" style="padding-top: 0.5rem; padding-right: 4rem;">
+                    <div class="input-group">
                         <input type="text" class="form-control buscarCaja"
                             placeholder="Buscar por número de parte o descripción" aria-label="Recipient's username"
                             aria-describedby="basic-addon2">
@@ -33,22 +33,25 @@
                 <div class="col-2 navbarEscritorio">
                     <div class="row">
                         <a href="" class="col-5"><img src="src/assets/profilePictures/Usuario.png"
-                                style="height: 3rem;"></a>
+                            class="logo"></a>
                         <a href="" class="col-4"><img src="src/assets/profilePictures/Carrito.png"
-                                style="height: 3rem;"></a>
+                            class="logo"></a>
                     </div>
                 </div>
-                <div class="col-2 navbarMobil">
-                    <div class="dropdown">
-                        <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="src/assets/profilePictures/menus.png" style="width: 2.5rem; padding-top: 0.4rem;">
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Inicio</a></li>
-                            <li><a class="dropdown-item" href="#">Nosotros</a></li>
-                            <li><a class="dropdown-item" href="#">Productos</a></li>
-                        </ul>
-                    </div>
+                <div class="col-10 navbarMobil">
+                    <p class="d-inline-flex gap-1 collapse-p" style="display:flex !important; justify-content: flex-end;">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" >
+                          <img src="src/assets/profilePictures/menus.png">
+                        </a>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          <ul class="lista-collapse">
+                            <li><img src="./src/assets/profilePictures/Usuario.png" alt="">Mi Perfil</li> <hr>
+                            <li><img src="./src/assets/profilePictures/Carrito.png" alt="">Carrito</li>
+                          </ul>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>
