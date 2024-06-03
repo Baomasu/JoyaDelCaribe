@@ -1,0 +1,19 @@
+.footer-section {
+    background-color: #A53860;
+    color: #F6F0E9;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #F6F0E9;
+
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #450920;
+}
+
+.footerPago {
+    background-color: #F6F0E9;
+}
