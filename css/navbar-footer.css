@@ -1,0 +1,116 @@
+/* <-----------------------------Navbar-----------------------------> */
+
+.navbar-1{
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.logo{
+    height: 4rem;
+}
+
+.card-body-collapse{
+    background-color: #F9DBBD !important;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.item-collapse {
+ padding-top: 0.5rem;
+ padding-bottom: 0.5rem;
+}
+
+.item-collapse img{
+    width: 2.5rem;
+    margin-right: 2rem;
+}
+
+.collapse-p a{
+    background-color: transparent; 
+    border: transparent;
+}
+.collapse-p img{
+    width: 2.5rem; 
+    padding-top: 0.4rem;
+}
+.input-group{
+    padding-top: 0.5rem; 
+    padding-right: 4rem;
+}
+.buscarCaja{
+    border-radius: 2rem 0rem 0rem 2rem !important;
+    border: 1px solid #A53860 !important;
+}
+
+.buscarBoton{
+    border-radius: 0px 20px 20px 0px !important;
+    background: #FFA5AB !important;
+    /* width: 107px; */
+}
+           
+.navbar-2{
+    background-color: #F9DBBD;
+    padding-top: 1%;
+    padding-bottom: 1%;
+   
+}
+
+.enlacenavbar{
+    text-decoration: none ;
+    color: black;
+    font-weight:lighter;
+}
+.btn-primary{
+    background-color: transparent !important; 
+    border: transparent !important;
+}
+
+@media(max-width: 767px) {
+    .navbarEscritorio{
+        display: none;
+    }
+    
+    .navbarBuscador{
+        display: none;
+    }
+    .dropdown-menu{
+        background-color: #F9DBBD !important;
+    }
+}
+
+@media(min-width:767px){
+    .navbarMobil{
+        display: none;
+    }
+    .collapse {
+        display: none;
+    }
+}
+
+
+
+/* <-----------------------------Footer-----------------------------> */
+.footer-section {
+    background-color: #A53860;
+    color: #F6F0E9;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #F6F0E9;
+
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #450920;
+}
+
+.footerPago {
+    background-color: #F6F0E9;
+}
