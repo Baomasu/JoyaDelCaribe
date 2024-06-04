@@ -1,12 +1,6 @@
 </html>
 <!doctype html>
 <html lang="en">
-<!--Esdras hola banda-->
-<!--Alexia-->
-<!--Alan-->
-<!--Javier-->
-<!--Ana-->
-<!--Brian-->
 
 <head>
     <meta charset="utf-8">
@@ -16,9 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="./JavaScript/readMore.js" defer></script>
+    <script src="./JavaScript/contacto.js" defer></script>
 </head>
-<script src="./JavaScript/readMore.js" defer></script>
-<script src="./JavaScript/contacto.js" defer></script>
 
 <body>
 
@@ -85,7 +81,7 @@
 
                         </div>
                     </div>
-                    
+
                     <!--card Esdras Diaz-->
 
                     <div class="col-lg-4 col-sm-12 col-index">
@@ -178,10 +174,12 @@
                                 <div class="container">
                                     <div class=" row" style="padding-left: 5%;">
                                         <div class="col-6">
-                                            <a href="https://github.com/cova100"><img class="vinculo1" src="src/assets/git.png" alt=""></a>
+                                            <a href="https://github.com/cova100"><img class="vinculo1"
+                                                    src="src/assets/git.png" alt=""></a>
                                         </div>
                                         <div class="col-6">
-                                            <a href="https://www.linkedin.com/in/javiercova/"><img class="vinculo2" src="src/assets/LkIn.png" alt=""></a>
+                                            <a href="https://www.linkedin.com/in/javiercova/"><img class="vinculo2"
+                                                    src="src/assets/LkIn.png" alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -348,16 +346,17 @@
                             <div class="col-lg-6 col-sm-12" style="padding-bottom: 3rem;">
                                 <input class="comentario-form" type="text" placeholder="Nombre:" id="nombre-form">
                                 <input class="comentario-form" type="mail" placeholder="Correo:" id="correo-form">
-                                <input class="comentario-form" type="tel" placeholder="Teléfono (+52):" id="telefono-form">
+                                <input class="comentario-form" type="tel" placeholder="Teléfono:"
+                                    id="telefono-form">
                             </div>
                             <div class="col-lg-6 col-sm-12">
                                 <textarea class="comentario-formText" type="text" placeholder="Comentario:" rows="4"
                                     id="comentario-form"></textarea>
                             </div>
                         </div>
-                        <div class="row" style="padding-bottom: 1rem;">
-                            <div class="alert alert-danger fade show col-lg-6 col-sm-12 text-center" style="display:none;" role="alert"
-                                id="alertaValidaciones">
+                        <div class="row">
+                            <div class="alert alert-danger fade show col-lg-6 col-sm-12 text-center"
+                                style="display:none;" role="alert" id="alertaValidaciones">
                                 <p id="alerta-txt"></p>
                             </div>
                         </div>

@@ -4,10 +4,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.card-holder {
-    background-color: white;
-}
-
 .imgPerfil {
     width: 6rem;
     border-radius: 2rem;
@@ -180,26 +176,14 @@
     background-position: 30%;
 }
 
-#descripcion {
-    display: flex;
-}
 
 .desc-section {
     background-color: white;
     padding-top: 7rem;
 }
 
-.mob-2 {
-    background-color: F9DBBD;
-    padding-top: 1%;
-    padding-bottom: 1%;
-
-}
-
-
 
 @media(max-width: 767px) {
-    
 
     .img-bg {
         display: none;
