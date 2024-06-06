@@ -1,4 +1,7 @@
-let footer = document.getElementById("footer");
+let footer = document.getElementById("body");
+
+
+
 footer.innerHTML = `
 <footer class="footer-section">
         <!-- row de bootstrap para definir una fila horizontal -->
