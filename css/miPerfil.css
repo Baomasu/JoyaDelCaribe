@@ -1,0 +1,17 @@
+.container-title {
+    background-color: #FFA5AB;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+.container-card-details{
+    background-color: white;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
+}
+
+.container-slide-item{
+    background-color: white;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
+}
