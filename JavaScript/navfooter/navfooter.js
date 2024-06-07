@@ -1,26 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+let main = document.getElementsByTagName('main')[0];
 
-<head>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
-        <link rel="stylesheet" href="./css/navbar-footer.css">
-        <script src="./JavaScript/footerbtn.js" defer></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    </head>
-</head>
+window.addEventListener('load',async () => {
+    await loadNavbar();
+    initializeFooterButton();
+});
 
-<body>
+async function loadNavbar() {
+    main.insertAdjacentHTML('beforebegin', `
+        <section class="container-fluid navbar-1">
+        <section class="container">
+            <div class="row">
+                <div class="col-2 navbarEscritorio">
+                    <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
+                </div>
+                <div class="col-2  navbarMobil">
+                    <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
+                </div>
+
+                <div class="col-8 navbarBuscador">
+                    <div class="input-group">
+                        <input type="text" class="form-control buscarCaja"
+                            placeholder="Buscar por número de parte o descripción" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <span class="input-group-text buscarBoton" id="basic-addon2">Buscar</span>
+                    </div>
+                </div>
+
+                <div class="col-2 navbarEscritorio">
+                    <div class="row">
+                        <a href="./miPerfil.html" class="col-5"><img src="src/assets/profilePictures/Usuario.png" class="logo"></a>
+                        <a href="./micarrito.html" class="col-4"><img src="src/assets/profilePictures/Carrito.png" class="logo"></a>
+                    </div>
+                </div>
+                <div class="col-10 navbarMobil">
+                    <p class="d-inline-flex gap-1 collapse-p"
+                        style="display:flex !important; justify-content: flex-end;">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <img src="src/assets/profilePictures/menus.png">
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="collapse " id="collapseExample">
+                <div class="card-body-collapse">
+                    <div class="item-collapse"><a href="./miPerfil.html" class="enlacenavbar"><img
+                                src="./src/assets/profilePictures/Usuario.png" alt="">Mi
+                            Perfil</a></div>
+                    <div class="item-collapse"><a href="./micarrito.html" class="enlacenavbar"><img
+                                src="./src/assets/profilePictures/Carrito.png" alt="">Carrito</a>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control buscarCaja"
+                            placeholder="Buscar por número de parte o descripción" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        <span class="input-group-text buscarBoton" id="basic-addon2">Buscar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="container-fluid navbar-2">
+        <section class="container text-center">
+            <div class="row">
+                <div class="col-4">
+                    <a class="enlacenavbar" href="./index.html">Inicio</a>
+                </div>
+                <div class="col-4">
+                    <a class="enlacenavbar" href="./nosotros.html">Nosotros</a>
+                </div>
+                <div class="col-4">
+                    <a class="enlacenavbar" href="./producto.html">Productos</a>
+                </div>
+            </div>
+        </section>
+    </section>`);
 
 
-    <nav></nav>
-    <main></main>
-    <!-- Clase footer-section en CSS solo cambia color de fondo y color de fuente -->
-    <footer class="footer-section">
+    main.insertAdjacentHTML('afterend',`
+    
+         <footer class="footer-section">
         <!-- row de bootstrap para definir una fila horizontal -->
         <!-- mx-auto es un margin en x de auto para centrar el contenido -->
         <!-- pt-5 es un padding en la parte superior de 5 -->
@@ -97,8 +156,40 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
+        
+        `);
+        await new Promise(resolve => setTimeout(resolve, 0));
+}
 
-</html>
+
+
+function initializeFooterButton() {
+    let correof = document.getElementById("correo-footer"); //correo
+    let btnSub = document.getElementById("btn-subscribir"); //botón de enviar.
+
+    let isValidf = true;
+    let contadorf = true;
+    let erCorreof = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+    if (btnSub && correof) {
+        btnSub.addEventListener("click", function (event) {
+            event.preventDefault();
+            correof.style.border = "";
+            isValidf = true;
+            if (!erCorreof.test(correof.value) && contadorf == true) { //validación para correo
+                correof.style.border = "solid red medium";
+                isValidf = false;
+            }
+
+            if (isValidf && contadorf) {
+                console.log(correof.value.toLowerCase())
+                correof.value = "";
+                correof.style.border = "";
+                btnSub.innerHTML = `<strong>Suscrito</strong>`;
+                contadorf = false;
+            }
+        });
+    } else {
+        console.error("Elementos del DOM no encontrados");
+    }
+}

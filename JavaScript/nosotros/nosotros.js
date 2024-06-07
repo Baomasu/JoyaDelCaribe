@@ -11,6 +11,7 @@ let alertaTexto = document.getElementById("alerta-txt"); //mensaje de error
 
 let isValid = true;
 let contador = true;
+let blankRegex = /^\S*$/;
 let erCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 let erTelefono = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
 
@@ -25,7 +26,7 @@ btnEnviar.addEventListener("click", function (event) {
     telefono.style.border = "solid 0.01rem #450920";
     comentario.style.border = "solid 0.01rem #450920";
     isValid = true;
-    if (nombre.value.length < 3 && contador == true) { //validación para nombre
+    if ((nombre.value.length < 3 && contador == true) || !blankRegex.test(nombre.value)) { //validación para nombre
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Nombre</b> no es correcto.</p>`;
         alertaValidaciones.style.display = "block";
         nombre.style.border = "solid red medium";
@@ -43,7 +44,7 @@ btnEnviar.addEventListener("click", function (event) {
         telefono.style.border = "solid red medium";
         isValid = false;
     }
-    if ((comentario.value.length < 4 || comentario.value.length > 150) && contador == true) { //validación para comentario
+    if (((comentario.value.length < 4 || comentario.value.length > 150) && contador == true) || !blankRegex.test(comentario.value)) { //validación para comentario
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Comentario</b> no es correcto.</p>`;
         alertaValidaciones.style.display = "block";
         comentario.style.border = "solid red medium";
