@@ -1,7 +1,10 @@
-.titulo{ 
-    background-color:  #FFA5AB;
-    height: 10rem;
-    margin: 0;
-    
-}; /* el margin es para los container de adentro a afuera*/
+.titulo {
+    background-color: #FFA5AB;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+
+}
+
+;
+/* el margin es para los container de adentro a afuera*/
 /* paddin funciona con el contenido del contenedor*/
