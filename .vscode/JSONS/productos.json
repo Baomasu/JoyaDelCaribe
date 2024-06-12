@@ -7,7 +7,7 @@
           "description": "Revitaliza tu piel con cada lavado gracias a nuestro limpiador 'Frescura Marina', que limpia profundamente mientras mantiene la hidratación natural de tu piel.",
           "price": 499.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "frescuraMarina",
           "discount": 0
         },
         {
@@ -17,7 +17,7 @@
           "description": "Refresca y prepara tu piel con la hidratación del ácido hialurónico inspirado en las aguas cristalinas de los cenotes del Caribe.",
           "price": 559.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "brumaCenote",
           "discount": 0
         },
         {
@@ -27,7 +27,7 @@
           "description": "Ilumina tu rostro con el poder antioxidante de la vitamina C, capturando la esencia de los cítricos caribeños en cada gota.",
           "price": 199.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "esenciaCitrus",
           "discount": 20
         },
         {
@@ -37,7 +37,7 @@
           "description": "Protege y nutre tu piel bajo el sol tropical con nuestra crema hidratante que combina hidratación profunda y protección solar eficaz.",
           "price": 329.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "solCaribenio",
           "discount": 0
         },
         {
@@ -47,7 +47,7 @@
           "description": "Purifica y renueva tu piel con la rica arcilla extraída de la profundidad de Tulum, perfecta para un tratamiento detoxificante.",
           "price": 189.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "arcillaTulum",
           "discount": 5
         },
         {
@@ -57,7 +57,7 @@
           "description": "Suaviza y renueva tu piel con granos de arena coralina, diseñados para exfoliar delicadamente y promover la regeneración cutánea.",
           "price": 89.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "arenaCoralina",
           "discount": 0
         },
         {
@@ -67,7 +67,7 @@
           "description": "Rico en nutrientes y antioxidantes, este aceite facial envuelve tu piel en un velo de hidratación tropical intensiva.",
           "price": 199.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "elixirTropical",
           "discount": 0
         },
         {
@@ -77,7 +77,7 @@
           "description": "Rejuvenece e ilumina el contorno de tus ojos con esta fórmula especial, diseñada para reducir visiblemente signos de cansancio y envejecimiento.",
           "price": 119.00,
           "category": "SkinCare",
-          "img": "",
+          "img": "miradaDeSirena",
           "discount": 10
         },
         {
@@ -87,7 +87,7 @@
           "description": "Prepara tu piel para un maquillaje impecable con nuestro primer 'Velo de Playa', que suaviza la piel y prolonga la duración de tu look.",
           "price": 249.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "veloDePlaya",
           "discount": 0
         },
         {
@@ -97,7 +97,7 @@
           "description": "Consigue un acabado perfecto y natural con nuestra base de maquillaje, disponible en varias tonalidades para coincidir con el verdadero tono de tu piel.",
           "price": 299.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "tonosDelCaribe",
           "discount": 0
         },
         {
@@ -107,7 +107,7 @@
           "description": "Cubre imperfecciones y ojeras eficazmente con nuestro corrector inspirado en la robustez y belleza del coral.",
           "price": 129.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "coberturaDeCoral",
           "discount": 15
         },
         {
@@ -117,7 +117,7 @@
           "description": "Matifica y sella tu maquillaje con un acabado suave y sedoso, como tocar las palmas caribeñas.",
           "price": 299.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "sedaDePalma",
           "discount": 0
         },
         {
@@ -127,7 +127,7 @@
           "description": "Explora una variedad de looks con nuestra paleta de sombras inspirada en los colores vibrantes de un atardecer maya.",
           "price": 499.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "atardecerMaya",
           "discount": 25
         },
         {
@@ -137,7 +137,7 @@
           "description": "Define tus ojos con precisión y durabilidad con nuestro delineador líquido, tan profundo y misterioso como una noche estrellada en el Caribe.",
           "price": 159.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "nocheEstrellada",
           "discount": 0
         },
         {
@@ -147,7 +147,7 @@
           "description": "Intensifica tus pestañas con volumen y longitud extraordinarios, inspirado en las cascadas ocultas del Caribe.",
           "price": 129.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "cascadaNegra",
           "discount": 0
         },
         {
@@ -157,7 +157,7 @@
           "description": "Añade un toque de color natural y radiante a tus mejillas con nuestro rubor en crema, tan fresco como la guayaba recién cortada.",
           "price": 199.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "florDeGuayaba",
           "discount": 0
         },
         {
@@ -167,7 +167,7 @@
           "description": "Captura la luminosidad de la luna caribeña en tu piel con este iluminador que ofrece un resplandor sutil y encantador.",
           "price": 249.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "luzLunaCaribena",
           "discount": 30
         },
         {
@@ -177,7 +177,7 @@
           "description": "Viste tus labios con colores intensos y duraderos, inspirados en la vibrante flor de hibisco, para un acabado espectacular que dura todo el día.",
           "price": 199.00,
           "category": "Maquillaje",
-          "img": "",
+          "img": "besosDeHibisco",
           "discount": 0
         }
       ]

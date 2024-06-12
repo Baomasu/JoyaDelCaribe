@@ -5,6 +5,16 @@
 
 }
 
+.tituloProductos{
+    background-color: #F9DBBD;
+    height: 18.75rem;
+}
+
+.tituloProductos p{
+    color: white;
+    font-size: 3.4rem;
+}
+
 ;
 /* el margin es para los container de adentro a afuera*/
 /* paddin funciona con el contenido del contenedor*/
