@@ -5,12 +5,8 @@
 
 }
 
-.tituloProductos{
-    background-color: #F9DBBD;
-    height: 18.75rem;
-}
 
-.tituloProductos p{
+.titulo p{
     color: white;
     font-size: 3.4rem;
 }
