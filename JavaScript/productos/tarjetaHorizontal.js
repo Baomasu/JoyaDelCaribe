@@ -49,7 +49,7 @@ function addCarouselItem(productList) {
                     <div class="card mb-7 my-4 rounded-4 justify-content-center" style="width: 100%; height: 320px;"> <!-- Estilo consistente -->
                         <div class="row g-0">
                             <div class="col-md-7">  <!-- Imagen a tamaño completo -->
-                                <img src="./src/assets/productssrc/${product.img}" class="img-fluid rounded-start" alt="${product.name}">
+                                <img src="./src/assets/productssrc/${product.img}" class="img-fluid rounded-start " alt="${product.name}">
                                 <span class="position-absolute top-0 start-0 badge text-bg-danger" style="margin-top: 2rem;">
                                     -${product.discount}%
                                 </span>

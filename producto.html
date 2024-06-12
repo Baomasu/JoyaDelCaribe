@@ -18,7 +18,10 @@
     <!-- Archivos css js navbar y Footer-->
     <link rel="stylesheet" href="./css/productos.css">
     <link rel="stylesheet" href="./css/navbar-footer.css">
+    <link rel="stylesheet" href="./css/T-vertical.css">
     <script src="./JavaScript/navfooter/navfooter.js" defer></script>
+    <script src="./JavaScript/productos/tarjetasVerticales.js"></script>
+    <script src="./JavaScript/productos/tarjetaHorizontal.js" defer></script>
 
 
 </head>
@@ -33,29 +36,83 @@
         <!-- Espacio donde se enconrará el cuerpo principal de la página -->
 
         <div class="container-fluid titulo d-flex justify-content-center align-items-center">
-                <p>PRODUCTOS</p>
-        </div><br>
-        <div class="container-fluid">
-            <section class="container" id="tarjetas-verticales">
-            </section>
+            <p>PRODUCTOS</p>
         </div>
+
+
         <div class="container-fluid">
-             <!-- Inicio Banner con dos imagenes -->
-        <section class="container-fluid seccion-banners">
-            <section class="container">
-              <div class="row">
-                  <div class="col-lg-6 col-sm-12 p-2">
-                    <img class="img-fluid" src="src/assets/productosDesk/banner.jpeg" alt="Banner de cosmeticos">
-                  </div>
-                  <div class="col-lg-6 col-sm-12 p-2">
-                    <img class="img-fluid" src="src/assets/productosDesk/banner2.webp" alt="Banner de cosmeticos">
-                  </div>
+            <div class="container">
+                <!-- Filtro -->
+                <div class="row justify-content-between" style="padding-top: 5rem;">
+                    <div class="col-4">
+                        <h4>Conoce nuestros productos:</h4>
+                    </div>
+                    <div class="col-3"><select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select></div>
+                </div>
+            </div>
+
+            <section class="container" id="clean-product">
+                <div id="tarjetas-verticales"></div>
+            </section>
+
+            <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
+                <!-- botones de página-->
+                <div class="row justify-content-center">
+                    <button class="change-page col-1" id="previous-p"><</button>
+                            <div class="change-page col-1" id="present-p">
+                                <!--Aquí se inserta texto d ´la página acutal con js-->
+                            </div>
+                            <button class="change-page col-1" id="next-p">></button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container-fluid">
+            <!-- Inicio Banner con dos imagenes -->
+            <section class="container-fluid seccion-banners">
+                <section class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 p-2">
+                            <img class="img-fluid" src="src/assets/productosDesk/banner.jpeg"
+                                alt="Banner de cosmeticos">
+                        </div>
+                        <div class="col-lg-6 col-sm-12 p-2">
+                            <img class="img-fluid" src="src/assets/productosDesk/banner2.webp"
+                                alt="Banner de cosmeticos">
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- Fin Banner con 2 imagenes -->
+        </div>
+
+
+        <div class="container-fluid">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner" id="carousel-container">
+                    
+                  
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next"type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-            </section>
-          </section>
-          <!-- Fin Banner con 2 imagenes -->
         </div>
-        <div class="container-fluid"></div>
 
     </Main>
 
