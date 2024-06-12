@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/navbar-footer.css">
     <link rel="stylesheet" href="./css/T-horizontal.css">
     <script src="./JavaScript/navfooter/navfooter.js" defer></script>
+    <script src="./JavaScript/tarjetaHorizontal.js" defer></script>
 
 
 </head>
@@ -30,7 +31,7 @@
         <!-- Espacio donde se insertará el html dese el navbar.js -->
     </div>
 
-    <Main>
+    <main>
         <!-- Espacio donde se enconrará el cuerpo principal de la página -->
 
         <div class="container-fluid titulo"></div><br>
@@ -39,9 +40,24 @@
             </section>
         </div>
         <div class="container-fluid">banners</div>
-        <div class="container-fluid">listans de producta carrusel</div>
+        <div class="container-fluid">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner" id="carousel-container">
+                    
+                  
+                </div>
+                <button class="carousel-control-prev bg-secondary" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-secondary" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
 
-    </Main>
+    </main>
 
 
 </body>
