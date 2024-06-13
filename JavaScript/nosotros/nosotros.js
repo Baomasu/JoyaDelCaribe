@@ -9,8 +9,8 @@ let alertaValidaciones = document.getElementById("alertaValidaciones"); //mensaj
 let alertaTexto = document.getElementById("alerta-txt"); //mensaje de error
 
 
-let isValid = true;
-let contador = true;
+let isValid = true; //sólo cuando todo es válido.
+let contador = true; //Sólo una vez.
 let blankRegex = /^\S*$/;
 let erCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 let erTelefono = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
@@ -85,7 +85,6 @@ btnEnviar.addEventListener("click", function (event) {
             btnEnviar.style.opacity = 0.3;
             btnEnviar.innerText = "Enviado";
             contador = false;
-            console.log("prueba para solo mandar un mensaje");
         }).catch();
 
     }
