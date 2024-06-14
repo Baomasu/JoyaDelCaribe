@@ -14,12 +14,16 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">
+    </script>
+
 
     <!-- Archivos css js navbar y Footer-->
     <link rel="stylesheet" href="./css/navbar-footer.css">
     <link rel="stylesheet" href="./css/miPerfil.css">
     <script src="./JavaScript/navfooter/navfooter.js" defer></script>
-   
+    <script src="./JavaScript/miPerfil/agregarProducto.js" defer></script>
+
 
 
 
@@ -28,9 +32,68 @@
 <body>
     <Main>
         <!-- Espacio donde se enconrará el cuerpo principal de la página -->
-         <section class="container-flud container-title"></section>
-         <section class="container-flud container-card-details"></section>
-         <section class="container-flud container-slide-item"></section>
+        <section class="container-flud container-title"></section>
+        <section class="container-flud container-card-details"></section>
+        <section class="container-flud container-slide-item"></section>
+        <section class="container-flud">
+            <section class="container">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-open-modal" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Crear nuevo producto
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 txt-style" id="staticBackdropLabel">Nuevo Producto</h1>
+                                <button type="button" style="margin-bottom: 2rem;" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row container">
+                                    <b class="txt-style">Nombre de producto:</b>
+                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Nombre" id="form-nombre">
+                                    <b class="txt-style">Tipo de producto:</b>
+                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Tipo de producto"
+                                        id="form-tipo">
+                                    <b class="txt-style">Detalles de producto:</b>
+                                    <input class="col-12 txt-input-box" style="margin-bottom: 1rem;" type="text" placeholder="Detalles del producto"
+                                        id="form-detalles">
+                                    <b class="txt-style">Precio:</b>
+                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder=" 999.99" id="form-precio">
+                                    <b class="txt-style">Categoría:</b>
+                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Categoría"
+                                        id="form-categoria">
+                                    <b class="txt-style">Imágen de producto:</b>
+                                    <button type="button" style="margin-bottom: 1rem; margin-top: 1rem;"class=" col-4 btn-img" id="btn-img">Subir Imágen</button>
+
+                                    <div class="row">
+                                        <div class="alert alert-danger fade show col-lg-6 col-sm-12 text-center"
+                                            style="display:none;" role="alert" id="alertaValidaciones">
+                                            <p id="alerta-txt"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" style="margin-bottom: 1rem;"  class="btn btn-cerrar" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" style="margin-bottom: 1rem;" class="btn btn-crear" id="btn-crear">Crear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </section>
+
+
+
     </Main>
 
 </body>
