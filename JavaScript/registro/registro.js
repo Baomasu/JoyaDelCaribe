@@ -21,7 +21,7 @@ let blankRegex = /^\S*$/; //Regex para espacios en blanco y vacío
 let precioRegex = /^\d{1,3}(,\d{3})*(\.\d{1,2})?$/; //Validar precio, que tenga al menos un digito y pueda o no estar acompañado de decimales
 let emailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
-let nombreRegex = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+let nombreRegex = /^([A-Za-zÑñÁáÉéÍíÓóÚú]{3,}+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
 
 /// Se da Click al botón de enviar
 btnNewUser.addEventListener("click", validateForm);
@@ -40,10 +40,6 @@ function validateForm(event) {
     formPasswordConfirm.style.border = "solid 0.01rem #450920";
     isValid = true;
     
-    !nombreRegex.test(formName.value) ? console.log("se cumple condicion nombreRegex") : console.log("NO se cumple condicion nombreRegex");
-    formName.value.length < 3  ? console.log("se cumple condicion de longitud") : console.log("NO se cumple condicion LONGITUD"); 
-    !blankRegex.test(formName.value) ? console.log("se cumple condicion de BLANK") :  console.log("NO se cumple condicion BLANK");
-
     if (!nombreRegex.test(formName.value) ||formName.value.length < 3) { //validación para formName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Nombre</b> no es válido. Debe contener al menos tres caracteres</p>`;
         alertaValidaciones.style.display = "block";
@@ -52,7 +48,7 @@ function validateForm(event) {
     }
     
 
-    if (formLastName.value.length < 3 || !blankRegex.test(formLastName.value)) { //validación para formLastName
+    if (!nombreRegex.test(formLastName.value) || formLastName.value.length < 3) { //validación para formLastName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Apellido</b> no es válido. Debe contener al menos tres caracteres</p>`;
         alertaValidaciones.style.display = "block";
         formLastName.style.border = "solid red medium";
