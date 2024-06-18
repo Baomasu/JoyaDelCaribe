@@ -1,0 +1,73 @@
+section{
+    color: #450920;
+}
+
+section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formulario{
+    width: 40%;
+    background-color: #FFA5AB;
+    padding: 2rem;
+    border-radius: 30px 0px 0px 30px;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.img-re{
+    background-image: url("./src/assets/registro/registrarse1.png");
+    background-size: 100%;
+    background-position: 30%;
+}
+
+.registratebtn{
+    margin-top: 2rem;
+    background-color: #A53860;
+    color: white;
+    padding:.9rem ;
+    font-size: 1.5rem;
+    border-radius: .6rem;
+    border: none;
+    transition: 0.3s;
+    
+}
+
+.registratebtn:hover{
+    background-color: #c97392;
+}
+
+@media screen and (max-width: 1024px) {
+    .img-re{
+        display: none;
+    }
+    
+    .formulario{
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        border-radius: 30px;
+
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .formulario{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.form-control{
+    padding: .8rem;
+    border-radius: .7rem;
+    border-color: #450920;
+}
+
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
