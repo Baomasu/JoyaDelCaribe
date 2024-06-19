@@ -83,7 +83,7 @@ async function loadNavbar() {
         <!-- row de bootstrap para definir una fila horizontal -->
         <!-- mx-auto es un margin en x de auto para centrar el contenido -->
         <!-- pt-5 es un padding en la parte superior de 5 -->
-        <div class="row mx-auto pt-5">
+        <div class="container row mx-auto pt-5">
             <!-- col-md-6 col-lg-4 es una columna de 6 en dispositivos medianos y 4 en grandes -->
             <!-- px-5 py-3 es un padding en x de 5 y en y de 3 -->
             <div class="col-md-6 col-lg-4 px-5 py-3">

@@ -77,6 +77,7 @@ function validateForm(event) {
     }
 
     if (isValid){
+        alertaValidaciones.style.display = "none important!";
         // Crear objeto usuario
         newUser = {
             name : formName.value,

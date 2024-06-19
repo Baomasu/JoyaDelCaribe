@@ -17,12 +17,6 @@ section img{
     padding-right: 8rem;
 }
 
-.img-re{
-    background-image: url("./src/assets/registro/registrarse1.png");
-    background-size: 100%;
-    background-position: 30%;
-}
-
 .registratebtn{
     margin-top: 2rem;
     background-color: #A53860;
