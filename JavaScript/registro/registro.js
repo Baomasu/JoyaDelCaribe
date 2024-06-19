@@ -31,8 +31,8 @@ btnNewUser.addEventListener("click", validateForm);
 function validateForm(event) {
     event.preventDefault();
 
+    alertaValidaciones.style.display = "none important!";
     alertaTexto.innerHTML = ``;
-    alertaValidaciones.style.display = "none";
     formName.style.border = "solid 0.01rem #450920";
     formLastName.style.border = "solid 0.01rem #450920";
     formEmail.style.border = "solid 0.01rem #450920";
@@ -63,7 +63,7 @@ function validateForm(event) {
     }
                                    
     if (!passRegex.test(formPassword.value) || !blankRegex.test(formPassword.value)) { //validación para formPassword
-        alertaTexto.innerHTML += `<p>La <b style="color: red;">contraseña</b> no es válida.</p>`;
+        alertaTexto.innerHTML += `<p>La <b style="color: red;">contraseña</b> debe tener al menos 8 caracteres: iniciar con mayúscula, contener al menos uno de: una minúscula, un caracter especial [#?!@$ %^&*-] y un número.</p>`;
         alertaValidaciones.style.display = "block";
         formPassword.style.border = "solid red medium";
         isValid = false;
@@ -87,7 +87,6 @@ function validateForm(event) {
             
         }
     addUser(newUser);
-
     }!blankRegex.test(formName.value)
 
 }
