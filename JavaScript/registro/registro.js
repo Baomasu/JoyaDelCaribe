@@ -21,7 +21,7 @@ let blankRegex = /^\S*$/; //Regex para espacios en blanco y vacío
 let precioRegex = /^\d{1,3}(,\d{3})*(\.\d{1,2})?$/; //Validar precio, que tenga al menos un digito y pueda o no estar acompañado de decimales
 let emailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
-let nombreRegex = /^([A-Za-zÑñÁáÉéÍíÓóÚú]{3,}+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+let nombreRegex = /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/;
 
 /// Se da Click al botón de enviar
 btnNewUser.addEventListener("click", validateForm);
@@ -69,7 +69,7 @@ function validateForm(event) {
         isValid = false;
     }
 
-    if (formPasswordConfirm.value != formPassword.value || !blankRegex.test(formPasswordConfirm.value)) { //validación para formPasswordConfirm
+    if (!blankRegex.test(formPasswordConfirm.value) || formPasswordConfirm.value != formPassword.value) { //validación para formPasswordConfirm
         alertaTexto.innerHTML += `<p>Las <b style="color: red;">Contraseñas</b> no coinciden o el campo está vacío.</p>`;
         alertaValidaciones.style.display = "block";
         formPasswordConfirm.style.border = "solid red medium";
