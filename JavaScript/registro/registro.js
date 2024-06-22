@@ -9,7 +9,7 @@ const formPasswordConfirm = document.getElementById('passwordConfirm');
 /*<---------Boton para nuevo Usuario---->*/
 const btnNewUser = document.getElementById('newUser');
 
-/* <-------- Alertas---------------->*/ 
+/* <-------- Alertas---------------->*/
 let alertaValidaciones = document.getElementById("alertaValidaciones"); //mensaje de error
 let alertaTexto = document.getElementById("alerta-txt"); //mensaje de error
 
@@ -39,14 +39,14 @@ function validateForm(event) {
     formPassword.style.border = "solid 0.01rem #450920";
     formPasswordConfirm.style.border = "solid 0.01rem #450920";
     isValid = true;
-    
-    if (!nombreRegex.test(formName.value) ||formName.value.length < 3) { //validación para formName
+
+    if (!nombreRegex.test(formName.value) || formName.value.length < 3) { //validación para formName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Nombre</b> no es válido. Debe contener al menos tres caracteres</p>`;
         alertaValidaciones.style.display = "block";
         formName.style.border = "solid red medium";
         isValid = false;
     }
-    
+
 
     if (!nombreRegex.test(formLastName.value) || formLastName.value.length < 3) { //validación para formLastName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Apellido</b> no es válido. Debe contener al menos tres caracteres</p>`;
@@ -61,7 +61,7 @@ function validateForm(event) {
         formEmail.style.border = "solid red medium";
         isValid = false;
     }
-                                   
+
     if (!passRegex.test(formPassword.value) || !blankRegex.test(formPassword.value)) { //validación para formPassword
         alertaTexto.innerHTML += `<p>La <b style="color: red;">contraseña</b> debe tener al menos 8 caracteres: iniciar con mayúscula, contener al menos uno de: una minúscula, un caracter especial [#?!@$ %^&*-] y un número.</p>`;
         alertaValidaciones.style.display = "block";
@@ -76,19 +76,19 @@ function validateForm(event) {
         isValid = false;
     }
 
-    if (isValid){
+    if (isValid) {
         alertaValidaciones.style.display = "none important!";
         // Crear objeto usuario
         newUser = {
-            name : formName.value,
+            name: formName.value,
             lastName: formLastName.value,
             email: formEmail.value,
             password: formPassword.value,
             passwordConfirm: formPasswordConfirm.value,
-            
+
         }
-    addUser(newUser);
-    }!blankRegex.test(formName.value)
+        addUser(newUser);
+    } !blankRegex.test(formName.value)
 
 }
 
@@ -97,7 +97,7 @@ function addUser(userObject) {
     userArray.push(userObject);
     // Mandar el array de datos al localStorage
     //          .agregarCosa Nombre de Cosa, lo volvemos string porque asi se leen los datos en el lS           
-    localStorage.setItem('userArray',JSON.stringify(userArray));
+    localStorage.setItem('userArray', JSON.stringify(userArray));
 }
 
 
