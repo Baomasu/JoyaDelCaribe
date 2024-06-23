@@ -74,14 +74,23 @@ function validateForm(event) {
 
         // Crear objeto usuario
         let newUser = {
-            name: formName.value,
-            lastName: formLastName.value,
+            name: formName.value.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
+            lastName: formLastName.value.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
             phone: formPhone.value,
-            email: formEmail.value,
+            email: formEmail.value.trim().toLowerCase(),
             password: formPassword.value,
             passwordConfirm: formPasswordConfirm.value,
         }
         addUser(newUser);
+        Swal.fire({
+            icon: "success",
+            title: "¡Registro exitoso!",
+            text: "¡Bienvenido a Joya del Caribe!",
+            showConfirmButton: false,
+        });
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 3000);
     }
 }
 

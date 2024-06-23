@@ -35,43 +35,43 @@
 
         <form id="formRegistro"> <!--Commienza el formulario-->
           <div class="mb-3 pb-2">
-            <label for="name" class="form-label">Nombre(s)</label>
-            <input type="text" class="form-control" name="nombre" id="name">
+            <label for="name" class="form-label fs-5">Nombre(s)</label>
+            <input type="text" class="form-control" name="nombre" id="name" value="Alan">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="nameAlert">
               El nombre es obligatorio y solo puede contener letras, espacios, guiones y apóstrofes.
             </div>
           </div>
           <div class="mb-3 pb-2">
-            <label for="lastName" class="form-label">Apellido(s)</label>
-            <input type="text" class="form-control" name="apellido" id="lastName">
+            <label for="lastName" class="form-label fs-5">Apellido(s)</label>
+            <input type="text" class="form-control" name="apellido" id="lastName" value="García">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="lastNameAlert">
               El apellido es obligatorio y solo puede contener letras, espacios, guiones y apóstrofes.
             </div>
           </div>
           <div class="mb-3 pb-2">
-            <label for="phone" class="form-label">Número de teléfono</label>
-            <input type="tel" class="form-control" name="telefono" id="phone">
+            <label for="phone" class="form-label fs-5">Número de teléfono</label>
+            <input type="tel" class="form-control" name="telefono" id="phone" value="5548512365">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="phoneAlert">
               El número de teléfono debe contener 10 dígitos.
             </div>
           </div>
           <div class="mb-3 pb-2">
-            <label for="email" class="form-label">Correo electrónico</label>
-            <input type="text" class="form-control" name="correo" id="email">
+            <label for="email" class="form-label fs-5">Correo electrónico</label>
+            <input type="text" class="form-control" name="correo" id="email" value="alan@gmail.com">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="emailAlert">
               El correo electrónico es obligatorio y debe ser válido.
             </div>
           </div>
           <div class="mb-3 pb-2">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" name="contraseña" id="password">
+            <label for="password" class="form-label fs-5">Contraseña</label>
+            <input type="password" class="form-control" name="contraseña" id="password" value="123456*Lo">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="passAlert">
               La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula, un número y un carácter especial.
             </div>
           </div>
           <div class="mb-3 pb-4">
-            <label for="passwordConfirm" class="form-label">Confirmar contraseña</label>
-            <input type="password" class="form-control" id="passwordConfirm">
+            <label for="passwordConfirm" class="form-label fs-5">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="passwordConfirm" value="123456*Lo">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="confirmPassAlert">
               Las contraseñas no coinciden.
             </div>
@@ -92,6 +92,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="./JavaScript/registro/registro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
