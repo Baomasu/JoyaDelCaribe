@@ -7,9 +7,6 @@ const formEmail = document.getElementById('email');
 const formPassword = document.getElementById('password');
 const formPasswordConfirm = document.getElementById('passwordConfirm');
 
-/*<---------Boton para nuevo Usuario---->*/
-const btnNewUser = document.getElementById('newUser');
-
 /* <-------- Alertas---------------->*/
 let alertaValidaciones = document.getElementById("alertaValidaciones"); //mensaje de error
 let alertaTexto = document.getElementById("alerta-txt"); //mensaje de error
@@ -19,22 +16,21 @@ let userArray = JSON.parse(localStorage.getItem('users')) ? JSON.parse(localStor
 
 /* <----------- REGEX ------------> */
 let blankRegex = /^\S*$/; //Regex para espacios en blanco y vacío
-let precioRegex = /^\d{1,3}(,\d{3})*(\.\d{1,2})?$/; //Validar precio, que tenga al menos un digito y pueda o no estar acompañado de decimales
 let emailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 let passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
 let nombreRegex = /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/;
 
 /// Se da Click al botón de enviar
-btnNewUser.addEventListener("click", validateForm);
-    
-
+formRegistro.addEventListener("submit", validateForm);
 
 function validateForm(event) {
     event.preventDefault();
 
-    alertaValidaciones.style.display = "none important!";
+    alertaValidaciones.style.display = "none";
     alertaTexto.innerHTML = ``;
-    isValid = true;
+    let isValid = true;
+
+    // Validaciones
 
     if (!nombreRegex.test(formName.value) || formName.value.length < 3) { //validación para formName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Nombre</b> no es válido. Debe contener al menos tres caracteres</p>`;
@@ -89,16 +85,16 @@ function validateForm(event) {
     if (isValid) {
         
         // Crear objeto usuario
-        newUser = {
+        let newUser = {
             name: formName.value,
             lastName: formLastName.value,
             email: formEmail.value,
             password: formPassword.value,
             passwordConfirm: formPasswordConfirm.value,
-
         }
         addUser(newUser);
-    } !blankRegex.test(formName.value)
+    }
+    // !blankRegex.test(formName.value)
 
 }
 
