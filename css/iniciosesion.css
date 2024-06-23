@@ -18,13 +18,13 @@ section img{
 }
 
 /* quitar decoracion y color a los links */
-#linkInicioSesion{
+.links{
     text-decoration: none;
     color: #450920;
 
 }
 
-#linkInicioSesion:hover{
+.links:hover{
     color: #A53860;
 }
 

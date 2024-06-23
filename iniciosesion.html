@@ -21,14 +21,15 @@
     <link rel="stylesheet" href="./css/navbar-footer.css">
     <script src="./JavaScript/navfooter/navfooter.js" defer></script>
     <!-- Estilos de registro -->
-    <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="./css//iniciosesion.css">
 </head>
 
 <body style="background-color: #F9DBBD;">
 
-    <main id="resgistro">
+    <main id="registro">
 
         <section class="container-fluid d-flex justify-content-center my-5">
+
             <div style="background-color:#F6F0E9;" class="d-flex flex-column justify-content-center formulario">
 
                 <h1 class="text-center py-4">CLIENTE REGISTRADO</h1>
@@ -45,19 +46,20 @@
                         <label for="password" class="form-label fs-5">Contraseña</label>
                         <input type="password" class="form-control" name="contraseña" id="password" value="123456*Lo">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="passAlert">
-                            La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra
+                            La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una
+                            letra
                             minúscula, un número y un carácter especial.
                         </div>
                     </div>
-                    <a href="">¿Olvidó su contraseña?</a>
+                    <a href="./Rcontraseña.html" class="links">¿Olvidó su contraseña?</a>
                     <button type="submit" class="registratebtn w-100 mb-5" id="newUser">
                         <i class="bi bi-lock-fill"></i> INICIAR SESIÓN
                     </button>
-                    <p>¿No tienes una cuenta? <a href="">Crea una.</a></p>
+                    <p>¿No tienes una cuenta? <a href="./registro.html" class="links">Crea una.</a></p>
                 </form> <!--termina el formulario-->
 
             </div>
-            <div class="img-re"><img src="./src/assets/registro/registrarse1.png" alt="">
+            <div class="img-re"><img src="./src/assets/inicioSesion/inicio.jpg" alt="">
             </div>
 
         </section>
