@@ -33,7 +33,17 @@ formLastName.addEventListener("blur", () => { validacion(nombreRegex, formLastNa
 formPhone.addEventListener("blur", () => { validacion(phoneRegex, formPhone, phoneAlert); })
 formEmail.addEventListener("blur", () => { validacion(emailRegex, formEmail, emailAlert); })
 formPassword.addEventListener("blur", () => { validacion(passRegex, formPassword, passAlert); })
-formPasswordConfirm.addEventListener("blur", () => { validacion(passRegex, formPasswordConfirm, confirmPassAlert); })
+formPasswordConfirm.addEventListener("blur", () => {
+    if (formPasswordConfirm.value != formPassword.value) {
+        console.log("No son iguales");
+        confirmPassAlert.classList.remove("d-none")
+        formPasswordConfirm.classList.add("is-invalid")
+    } else {
+        formPasswordConfirm.classList.add("is-valid")
+        formPasswordConfirm.classList.remove("is-invalid")
+        confirmPassAlert.classList.add("d-none")
+    }
+})
 
 /// Se da Click al botón de enviar
 formRegistro.addEventListener("submit", validateForm);
@@ -50,9 +60,15 @@ function validateForm(event) {
     validacion(emailRegex, formEmail, emailAlert);
     validacion(passRegex, formPassword, passAlert);
 
-    if (formPasswordConfirm.value != formPassword.value) { //validación para formPasswordConfirm
-        
-        validacion(passRegex, formPasswordConfirm, confirmPassAlert);
+    if (formPasswordConfirm.value != formPassword.value) {
+        console.log("No son iguales");
+        confirmPassAlert.classList.remove("d-none")
+        formPasswordConfirm.classList.add("is-invalid")
+        isValid = false;
+    } else {
+        formPasswordConfirm.classList.add("is-valid")
+        formPasswordConfirm.classList.remove("is-invalid")
+        confirmPassAlert.classList.add("d-none")
     }
 
     if (isValid) {
@@ -87,5 +103,3 @@ function validacion(regex, form, alert) {
         alert.classList.add("d-none")
     }
 }
-
-
