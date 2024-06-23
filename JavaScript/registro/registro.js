@@ -1,5 +1,6 @@
 
 /* <-------------ELEMENTOS DEL FORMULARIO-----------> */
+const formRegistro = document.getElementById('formRegistro');
 const formName = document.getElementById('name');
 const formLastName = document.getElementById('lastName');
 const formEmail = document.getElementById('email');
