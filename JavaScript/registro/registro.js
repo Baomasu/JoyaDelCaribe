@@ -54,11 +54,26 @@ function validateForm(event) {
     let isValid = true;
 
     // Validaciones
-    validacion(nombreRegex, formName, nameAlert);
-    validacion(nombreRegex, formLastName, lastNameAlert);
-    validacion(phoneRegex, formPhone, phoneAlert);
-    validacion(emailRegex, formEmail, emailAlert);
-    validacion(passRegex, formPassword, passAlert);
+    if (!validacion(nombreRegex, formName, nameAlert)) {
+        isValid = false;
+    }
+
+    if (!validacion(nombreRegex, formLastName, lastNameAlert)) {
+        isValid = false;
+    }
+
+    if (!validacion(phoneRegex, formPhone, phoneAlert)
+    ) {
+        isValid = false;
+    }
+    if (!validacion(emailRegex, formEmail, emailAlert)) {
+        isValid = false;
+    }
+
+    if (!validacion(passRegex, formPassword, passAlert)) {
+        isValid = false;
+    }
+
 
     if (formPasswordConfirm.value != formPassword.value) {
         console.log("No son iguales");
@@ -70,12 +85,14 @@ function validateForm(event) {
         formPasswordConfirm.classList.remove("is-invalid")
         confirmPassAlert.classList.add("d-none")
     }
-
+    console.log(isValid);
     if (isValid) {
+
         // Crear objeto usuario
         let newUser = {
             name: formName.value,
             lastName: formLastName.value,
+            phone: formPhone.value,
             email: formEmail.value,
             password: formPassword.value,
             passwordConfirm: formPasswordConfirm.value,
@@ -96,10 +113,11 @@ function validacion(regex, form, alert) {
     if (!regex.test(form.value) || form.value.length < 3) {
         alert.classList.remove("d-none")
         form.classList.add("is-invalid")
-        return isValid = false;
+        return false;
     } else {
         form.classList.add("is-valid")
         form.classList.remove("is-invalid")
         alert.classList.add("d-none")
+        return true;
     }
 }
