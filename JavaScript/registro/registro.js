@@ -7,7 +7,6 @@ const formPhone = document.getElementById('phone');
 const formEmail = document.getElementById('email');
 const formPassword = document.getElementById('password');
 const formPasswordConfirm = document.getElementById('passwordConfirm');
-const newUser = document.getElementById('newUser');
 
 /* <-------- Alertas---------------->*/
 let nameAlert = document.getElementById("nameAlert")
@@ -71,7 +70,7 @@ function validateForm(event) {
     }
     console.log(isValid);
     if (isValid) {
-
+        document.getElementById('newUser').disabled = true;
         // Crear objeto usuario
         let newUser = {
             name: formName.value.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
@@ -82,6 +81,7 @@ function validateForm(event) {
             passwordConfirm: formPasswordConfirm.value,
         }
         addUser(newUser);
+        
         Swal.fire({
             icon: "success",
             title: "¡Registro exitoso!",
