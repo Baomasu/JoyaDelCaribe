@@ -31,52 +31,52 @@
     <section class="container-fluid d-flex justify-content-center my-5">
       <div style="background-color:#F6F0E9;" class="d-flex flex-column justify-content-center formulario">
         
-        <h1 class="text-center">CREAR CUENTA</h1>
+        <h1 class="text-center py-4">CREAR CUENTA</h1>
 
         <form id="formRegistro"> <!--Commienza el formulario-->
-          <div class="mb-3 pb-4">
-            <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="name" value="Alan">
+          <div class="mb-3 pb-2">
+            <label for="name" class="form-label">Nombre(s)</label>
+            <input type="text" class="form-control" name="nombre" id="name">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="nameAlert">
-              A simple danger alert—check it out!
+              El nombre es obligatorio y solo puede contener letras, espacios, guiones y apóstrofes.
             </div>
           </div>
-          <div class="mb-3 pb-4">
+          <div class="mb-3 pb-2">
             <label for="lastName" class="form-label">Apellido(s)</label>
-            <input type="text" class="form-control" name="apellido" id="lastName" value="García">
+            <input type="text" class="form-control" name="apellido" id="lastName">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="lastNameAlert">
-              A simple danger alert—check it out!
+              El apellido es obligatorio y solo puede contener letras, espacios, guiones y apóstrofes.
             </div>
           </div>
-          <div class="mb-3 pb-4">
+          <div class="mb-3 pb-2">
             <label for="phone" class="form-label">Número de teléfono</label>
-            <input type="tel" class="form-control" name="telefono" id="phone" value="123456789">
+            <input type="tel" class="form-control" name="telefono" id="phone">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="phoneAlert">
-              A simple danger alert—check it out!
+              El número de teléfono debe contener 10 dígitos.
             </div>
           </div>
-          <div class="mb-3 pb-4">
+          <div class="mb-3 pb-2">
             <label for="email" class="form-label">Correo electrónico</label>
-            <input type="text" class="form-control" name="correo" id="email" value="alan@gmail.com">
+            <input type="text" class="form-control" name="correo" id="email">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="emailAlert">
-              A simple danger alert—check it out!
+              El correo electrónico es obligatorio y debe ser válido.
             </div>
           </div>
-          <div class="mb-3 pb-4">
+          <div class="mb-3 pb-2">
             <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" name="contraseña" id="password" value="123456*Lo">
+            <input type="password" class="form-control" name="contraseña" id="password">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="passAlert">
-              A simple danger alert—check it out!
+              La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una letra minúscula, un número y un carácter especial.
             </div>
           </div>
           <div class="mb-3 pb-4">
             <label for="passwordConfirm" class="form-label">Confirmar contraseña</label>
-            <input type="password" class="form-control" id="passwordConfirm" value="123456*Lo">
+            <input type="password" class="form-control" id="passwordConfirm">
             <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="confirmPassAlert">
-              A simple danger alert—check it out!
+              Las contraseñas no coinciden.
             </div>
           </div>
-          <button type="submit" class="registratebtn w-100" id="newUser">
+          <button type="submit" class="registratebtn w-100 mb-5" id="newUser">
             CREAR
           </button>
         </form> <!--termina el formulario-->

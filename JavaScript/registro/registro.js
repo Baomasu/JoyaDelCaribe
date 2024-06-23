@@ -7,6 +7,7 @@ const formPhone = document.getElementById('phone');
 const formEmail = document.getElementById('email');
 const formPassword = document.getElementById('password');
 const formPasswordConfirm = document.getElementById('passwordConfirm');
+const newUser = document.getElementById('newUser');
 
 /* <-------- Alertas---------------->*/
 let nameAlert = document.getElementById("nameAlert")
@@ -27,23 +28,6 @@ let phoneRegex = /^(?!.*0{3})\d{10}$/;
 let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 // Mínimo ocho caracteres, al menos una letra inglesa mayúscula, una letra inglesa minúscula, un número y un carácter especial
 let passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
-
-formName.addEventListener("blur", () => { validacion(nombreRegex, formName, nameAlert); })
-formLastName.addEventListener("blur", () => { validacion(nombreRegex, formLastName, lastNameAlert); })
-formPhone.addEventListener("blur", () => { validacion(phoneRegex, formPhone, phoneAlert); })
-formEmail.addEventListener("blur", () => { validacion(emailRegex, formEmail, emailAlert); })
-formPassword.addEventListener("blur", () => { validacion(passRegex, formPassword, passAlert); })
-formPasswordConfirm.addEventListener("blur", () => {
-    if (formPasswordConfirm.value != formPassword.value) {
-        console.log("No son iguales");
-        confirmPassAlert.classList.remove("d-none")
-        formPasswordConfirm.classList.add("is-invalid")
-    } else {
-        formPasswordConfirm.classList.add("is-valid")
-        formPasswordConfirm.classList.remove("is-invalid")
-        confirmPassAlert.classList.add("d-none")
-    }
-})
 
 /// Se da Click al botón de enviar
 formRegistro.addEventListener("submit", validateForm);
@@ -75,7 +59,7 @@ function validateForm(event) {
     }
 
 
-    if (formPasswordConfirm.value != formPassword.value) {
+    if (formPasswordConfirm.value != formPassword.value || formPasswordConfirm.value == "") {
         console.log("No son iguales");
         confirmPassAlert.classList.remove("d-none")
         formPasswordConfirm.classList.add("is-invalid")
