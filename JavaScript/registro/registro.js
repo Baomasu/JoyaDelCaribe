@@ -26,7 +26,7 @@ let nombreRegex = /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záé�
 
 /// Se da Click al botón de enviar
 btnNewUser.addEventListener("click", validateForm);
-
+    
 
 
 function validateForm(event) {
@@ -34,51 +34,60 @@ function validateForm(event) {
 
     alertaValidaciones.style.display = "none important!";
     alertaTexto.innerHTML = ``;
-    formName.style.border = "solid 0.01rem #450920";
-    formLastName.style.border = "solid 0.01rem #450920";
-    formEmail.style.border = "solid 0.01rem #450920";
-    formPassword.style.border = "solid 0.01rem #450920";
-    formPasswordConfirm.style.border = "solid 0.01rem #450920";
     isValid = true;
 
     if (!nombreRegex.test(formName.value) || formName.value.length < 3) { //validación para formName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Nombre</b> no es válido. Debe contener al menos tres caracteres</p>`;
         alertaValidaciones.style.display = "block";
-        formName.style.border = "solid red medium";
+        formName.classList.add("is-invalid")
         isValid = false;
+    } else {
+        formName.classList.add("is-valid")
+        formName.classList.remove("is-invalid")
     }
-
 
     if (!nombreRegex.test(formLastName.value) || formLastName.value.length < 3) { //validación para formLastName
         alertaTexto.innerHTML += `<p>El <b style="color: red;">Apellido</b> no es válido. Debe contener al menos tres caracteres</p>`;
         alertaValidaciones.style.display = "block";
-        formLastName.style.border = "solid red medium";
+        formLastName.classList.add("is-invalid")
         isValid = false;
+    } else {
+        formLastName.classList.add("is-valid")
+        formLastName.classList.remove("is-invalid")
     }
 
     if (!emailRegex.test(formEmail.value) || formEmail.value.length < 3 || !blankRegex.test(formEmail.value)) { //validación para formEmail
         alertaTexto.innerHTML += `<p>El <b style="color: red;">email</b> no tiene el formato correcto o el campo está vacío.</p>`;
         alertaValidaciones.style.display = "block";
-        formEmail.style.border = "solid red medium";
+        formEmail.classList.add("is-invalid")
         isValid = false;
+    } else {
+        formEmail.classList.add("is-valid")
+        formEmail.classList.remove("is-invalid")
     }
 
     if (!passRegex.test(formPassword.value) || !blankRegex.test(formPassword.value)) { //validación para formPassword
         alertaTexto.innerHTML += `<p>La <b style="color: red;">contraseña</b> debe tener al menos 8 caracteres: iniciar con mayúscula, contener al menos uno de: una minúscula, un caracter especial [#?!@$ %^&*-] y un número.</p>`;
         alertaValidaciones.style.display = "block";
-        formPassword.style.border = "solid red medium";
+        formPassword.classList.add("is-invalid")
         isValid = false;
+    } else {
+        formPassword.classList.add("is-valid")
+        formPassword.classList.remove("is-invalid")
     }
 
     if (!blankRegex.test(formPasswordConfirm.value) || formPasswordConfirm.value != formPassword.value) { //validación para formPasswordConfirm
         alertaTexto.innerHTML += `<p>Las <b style="color: red;">Contraseñas</b> no coinciden o el campo está vacío.</p>`;
         alertaValidaciones.style.display = "block";
-        formPasswordConfirm.style.border = "solid red medium";
+        formPasswordConfirm.classList.add("is-invalid")
         isValid = false;
+    } else {
+        formPasswordConfirm.classList.add("is-valid")
+        formPasswordConfirm.classList.remove("is-invalid")
     }
 
     if (isValid) {
-        alertaValidaciones.style.display = "none important!";
+        
         // Crear objeto usuario
         newUser = {
             name: formName.value,
