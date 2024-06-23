@@ -33,46 +33,47 @@
         
         <h1 class="text-center">CREAR CUENTA</h1>
 
-        <div class="alert alert-danger d-flex align-items-center" role="alert" id="alertaValidaciones"
-          style="display: none !important;">
-          <div id="alerta-txt">
-          </div>
-        </div>
-
         <form id="formRegistro"> <!--Commienza el formulario-->
           <div class="mb-3 pb-4">
             <label for="name" class="form-label">Nombre</label>
             <input type="text" class="form-control" name="nombre" id="name" value="">
-            <div class="invalid-feedback">
-              Please provide a valid input.
+            <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="nameAlert">
+              A simple danger alert—check it out!
             </div>
           </div>
           <div class="mb-3 pb-4">
             <label for="lastName" class="form-label">Apellido(s)</label>
             <input type="text" class="form-control" name="apellido" id="lastName" value="García">
-            <div class="invalid-feedback">
-              Please provide a valid input.
+            <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="lastNameAlert">
+              A simple danger alert—check it out!
+            </div>
+          </div>
+          <div class="mb-3 pb-4">
+            <label for="phone" class="form-label">Número de teléfono</label>
+            <input type="tel" class="form-control" name="telefono" id="phone" value="1234567891">
+            <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="phoneAlert">
+              A simple danger alert—check it out!
             </div>
           </div>
           <div class="mb-3 pb-4">
             <label for="email" class="form-label">Correo electrónico</label>
             <input type="text" class="form-control" name="correo" id="email" value="alan@gmail.com">
-            <div class="invalid-feedback">
-              Please provide a valid input.
+            <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="emailAlert">
+              A simple danger alert—check it out!
             </div>
           </div>
           <div class="mb-3 pb-4">
             <label for="password" class="form-label">Contraseña</label>
             <input type="password" class="form-control" name="contraseña" id="password" value="123456*Lo">
-            <div class="invalid-feedback">
-              Please provide a valid input.
+            <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="passAlert">
+              A simple danger alert—check it out!
             </div>
           </div>
           <div class="mb-3 pb-4">
             <label for="passwordConfirm" class="form-label">Confirmar contraseña</label>
             <input type="password" class="form-control" id="passwordConfirm" value="123456*Lo">
-            <div class="invalid-feedback">
-              Please provide a valid input.
+            <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="confirmPassAlert">
+              A simple danger alert—check it out!
             </div>
           </div>
           <button type="submit" class="registratebtn w-100" id="newUser">

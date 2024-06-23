@@ -3,13 +3,18 @@
 const formRegistro = document.getElementById('formRegistro');
 const formName = document.getElementById('name');
 const formLastName = document.getElementById('lastName');
+const formPhone = document.getElementById('phone');
 const formEmail = document.getElementById('email');
 const formPassword = document.getElementById('password');
 const formPasswordConfirm = document.getElementById('passwordConfirm');
 
 /* <-------- Alertas---------------->*/
-let alertaValidaciones = document.getElementById("alertaValidaciones"); //mensaje de error
-let alertaTexto = document.getElementById("alerta-txt"); //mensaje de error
+let nameAlert = document.getElementById("nameAlert")
+let lastNameAlert = document.getElementById("lastNameAlert")
+let phoneAlert = document.getElementById("phoneAlert")
+let emailAlert = document.getElementById("emailAlert")
+let passAlert = document.getElementById("passAlert")
+let confirmPassAlert = document.getElementById("confirmPassAlert")
 
 let userArray = JSON.parse(localStorage.getItem('users')) ? JSON.parse(localStorage.getItem('users')) : [];
 
@@ -26,64 +31,71 @@ formRegistro.addEventListener("submit", validateForm);
 function validateForm(event) {
     event.preventDefault();
 
-    alertaValidaciones.style.display = "none";
-    alertaTexto.innerHTML = ``;
     let isValid = true;
 
     // Validaciones
 
     if (!nombreRegex.test(formName.value) || formName.value.length < 3) { //validación para formName
-        alertaTexto.innerHTML += `<p>El <b style="color: red;">Nombre</b> no es válido. Debe contener al menos tres caracteres</p>`;
-        alertaValidaciones.style.display = "block";
+        nameAlert.classList.remove("d-none")
         formName.classList.add("is-invalid")
         isValid = false;
     } else {
         formName.classList.add("is-valid")
         formName.classList.remove("is-invalid")
+        nameAlert.classList.add("d-none")
     }
 
     if (!nombreRegex.test(formLastName.value) || formLastName.value.length < 3) { //validación para formLastName
-        alertaTexto.innerHTML += `<p>El <b style="color: red;">Apellido</b> no es válido. Debe contener al menos tres caracteres</p>`;
-        alertaValidaciones.style.display = "block";
+        lastNameAlert.classList.remove("d-none")
         formLastName.classList.add("is-invalid")
         isValid = false;
     } else {
         formLastName.classList.add("is-valid")
         formLastName.classList.remove("is-invalid")
+        lastNameAlert.classList.add("d-none")
+    }
+
+    if (formPhone.value.length < 3) { //validación para formPhone
+        phoneAlert.classList.remove("d-none")
+        formPhone.classList.add("is-invalid")
+        isValid = false;
+    } else {
+        formPhone.classList.add("is-valid")
+        formPhone.classList.remove("is-invalid")
+        phoneAlert.classList.add("d-none")
     }
 
     if (!emailRegex.test(formEmail.value) || formEmail.value.length < 3 || !blankRegex.test(formEmail.value)) { //validación para formEmail
-        alertaTexto.innerHTML += `<p>El <b style="color: red;">email</b> no tiene el formato correcto o el campo está vacío.</p>`;
-        alertaValidaciones.style.display = "block";
+        emailAlert.classList.remove("d-none")
         formEmail.classList.add("is-invalid")
         isValid = false;
     } else {
         formEmail.classList.add("is-valid")
         formEmail.classList.remove("is-invalid")
+        emailAlert.classList.add("d-none")
     }
 
     if (!passRegex.test(formPassword.value) || !blankRegex.test(formPassword.value)) { //validación para formPassword
-        alertaTexto.innerHTML += `<p>La <b style="color: red;">contraseña</b> debe tener al menos 8 caracteres: iniciar con mayúscula, contener al menos uno de: una minúscula, un caracter especial [#?!@$ %^&*-] y un número.</p>`;
-        alertaValidaciones.style.display = "block";
+        passAlert.classList.remove("d-none")
         formPassword.classList.add("is-invalid")
         isValid = false;
     } else {
         formPassword.classList.add("is-valid")
         formPassword.classList.remove("is-invalid")
+        passAlert.classList.add("d-none")
     }
 
     if (!blankRegex.test(formPasswordConfirm.value) || formPasswordConfirm.value != formPassword.value) { //validación para formPasswordConfirm
-        alertaTexto.innerHTML += `<p>Las <b style="color: red;">Contraseñas</b> no coinciden o el campo está vacío.</p>`;
-        alertaValidaciones.style.display = "block";
+        confirmPassAlert.classList.remove("d-none")
         formPasswordConfirm.classList.add("is-invalid")
         isValid = false;
     } else {
         formPasswordConfirm.classList.add("is-valid")
         formPasswordConfirm.classList.remove("is-invalid")
+        confirmPassAlert.classList.add("d-none")
     }
 
     if (isValid) {
-        
         // Crear objeto usuario
         let newUser = {
             name: formName.value,
