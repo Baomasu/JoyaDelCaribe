@@ -5,9 +5,13 @@
 }
 
 .imgPerfil {
-    width: 6rem;
-    border-radius: 2rem;
+    /* poner en circulo la imagen */
+    border-radius: 25%;
+    width: 50%;
+    /* width: 5rem; */
+    /* border-radius: 2rem; */
     margin: 2rem auto;
+    padding: 2.5rem;
 }
 
 .col-index {
