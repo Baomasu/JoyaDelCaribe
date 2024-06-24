@@ -68,7 +68,7 @@ function validateForm(event) {
             }, 3000);
 
         } else {
-            console.log("Correo electrónico o contraseña incorrectos");
+            console.log("Correo electrónico o contraseña incorrectos.");
             
             
             formEmail.classList.remove("is-valid")
