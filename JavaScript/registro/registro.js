@@ -19,14 +19,14 @@ let confirmPassAlert = document.getElementById("confirmPassAlert")
 let userArray = JSON.parse(localStorage.getItem('users')) ? JSON.parse(localStorage.getItem('users')) : [];
 
 /* <----------- REGEX ------------> */
-// Permite guiones y apóstrofes
-let nombreRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s'-]+$/;
+// Este regex sigue permitiendo letras (tanto mayúsculas como minúsculas), acentos, el carácter ñ en ambas mayúsculas y minúsculas, espacios, apóstrofes y guiones. 
+let nombreRegex = /(?=.*(?:[A-Za-zÁÉÍÓÚáéíóúÑñ]{3}))[A-Za-zÁÉÍÓÚáéíóúÑñ\s'-]+$/;
 // Solo acepta 10 números y no más de 3 ceros seguidos
 let phoneRegex = /^(?!.*0{3})\d{10}$/;
 // https://emailregex.com/
 let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 // Mínimo ocho caracteres, al menos una letra inglesa mayúscula, una letra inglesa minúscula, un número y un carácter especial
-let passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
+let passRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])[^\s]{8,}$/;
 
 /// Se da Click al botón de enviar
 formRegistro.addEventListener("submit", validateForm);
