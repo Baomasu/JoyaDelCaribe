@@ -75,10 +75,6 @@ function validateForm(event) {
             formEmail.classList.add("is-invalid")
             formPassword.classList.remove("is-valid")
             formPassword.classList.add("is-invalid")
-
-            
-
-
             passAlert.innerText = "Correo electrónico o contraseña incorrectos"
             passAlert.classList.remove("d-none")
         }

@@ -73,8 +73,8 @@ function validateForm(event) {
         document.getElementById('newUser').disabled = true;
         // Crear objeto usuario
         let newUser = {
-            name: formName.value.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
-            lastName: formLastName.value.trim().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
+            name: formName.value.trim().replace(/\s+/g, ' '),
+            lastName: formLastName.value.trim().replace(/\s+/g, ' '),
             phone: formPhone.value,
             email: formEmail.value.trim().toLowerCase(),
             password: formPassword.value,
