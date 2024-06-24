@@ -33,27 +33,55 @@ function validateForm(event) {
         isValid = false;
     }
 
-    console.log(isValid);
+    // console.log(isValid);
     if (isValid) {
-        document.getElementById('newUser').disabled = true;
+        emailAlert.classList.add("d-none")
+        passAlert.classList.remove("alert-info")
+        passAlert.classList.add("alert-danger")
         // Crear objeto usuario
         let newUser = {
             email: formEmail.value.trim().toLowerCase(),
             password: formPassword.value,
         }
         addUser(newUser);
+        // Obtener usuarios de localStorage
+        let storedUsers = JSON.parse(localStorage.getItem('userArray')) || [];
+        console.log(storedUsers);
+        // Buscar si el usuario existe y la contraseña coincide
+        let userExists = storedUsers.find(user => user.email === formEmail.value.trim().toLowerCase() && user.password === formPassword.value);
 
-        
-        
-        // Swal.fire({
-        //     icon: "success",
-        //     title: "¡Registro exitoso!",
-        //     text: "¡Bienvenido a Joya del Caribe!",
-        //     showConfirmButton: false,
-        // });
-        // setTimeout(() => {
-        //     window.location.href = "../index.html";
-        // }, 3000);
+        if (userExists) {
+            document.getElementById('newUser').disabled = true;
+
+            emailAlert.classList.add("d-none")
+            passAlert.classList.add("d-none")
+            console.log("Inicio de sesión exitoso");
+
+            Swal.fire({
+                icon: "success",
+                title: "¡Inicio de Sesión exitoso!",
+                text: "¡Bienvenido a Joya del Caribe!",
+                showConfirmButton: false,
+            });
+            setTimeout(() => {
+                window.location.href = "../index.html";
+            }, 3000);
+
+        } else {
+            console.log("Correo electrónico o contraseña incorrectos");
+            
+            
+            formEmail.classList.remove("is-valid")
+            formEmail.classList.add("is-invalid")
+            formPassword.classList.remove("is-valid")
+            formPassword.classList.add("is-invalid")
+
+            
+
+
+            passAlert.innerText = "Correo electrónico o contraseña incorrectos"
+            passAlert.classList.remove("d-none")
+        }
     }
 }
 
@@ -62,7 +90,7 @@ function addUser(userObject) {
     userArray.push(userObject);
     // Mandar el array de datos al localStorage
     //          .agregarCosa Nombre de Cosa, lo volvemos string porque asi se leen los datos en el lS           
-    localStorage.setItem('userSession', JSON.stringify(userArray));
+    localStorage.setItem('userLogin', JSON.stringify(userArray));
 }
 
 function validacion(regex, form, alert) {
@@ -71,9 +99,12 @@ function validacion(regex, form, alert) {
         form.classList.add("is-invalid")
         return false;
     } else {
-        form.classList.add("is-valid")
+        // form.classList.add("is-valid")
         form.classList.remove("is-invalid")
-        alert.classList.add("d-none")
+        alert.classList.remove("d-none")
+        alert.classList.add("alert-info")
+        alert.classList.remove("alert-danger")
+        alert.innerText = `El campo ingresado cumple con los requisitos de formato.`;
         return true;
     }
 }

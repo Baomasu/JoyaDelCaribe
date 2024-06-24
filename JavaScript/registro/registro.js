@@ -89,7 +89,7 @@ function validateForm(event) {
             showConfirmButton: false,
         });
         setTimeout(() => {
-            window.location.href = "../index.html";
+            window.location.href = "../iniciosesion.html";
         }, 3000);
     }
 }
