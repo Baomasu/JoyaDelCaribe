@@ -38,24 +38,20 @@
 }
 
 .bt-read-more {
-    background-color: #DA627D;
-    opacity: 44%;
+    background-color: #d17589;
+    margin-bottom: 1rem;
     color: white;
     border: none;
-    height: 1.5rem;
-    font-size: 0.8rem;
-    border-radius: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
     transition: 0.3s;
+    height: 2rem;
+    width: 100px !important;
 }
 
 .bt-read-more:hover{
     background-color: #DA627D;
     opacity: 66%;
-    color: white;
-    border: none;
-    height: 1.5rem;
-    font-size: 0.8rem;
-    border-radius: 0.5rem;
 }
 
 
@@ -77,17 +73,7 @@
     color: #450920;
 }
 
-.contacto {
-    background-color: #E8E8E8;
-    border-radius: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    box-shadow: 2px 2px 2px 2px rgba(10, 10, 10, 0.33);
-
-}
-
 .comentario-form {
-    background-color: #F6F0E9;
     border: solid 0.01rem #450920;
     border-radius: 0.5rem;
     width: 100%;
@@ -102,7 +88,6 @@
 }
 
 .comentario-formText {
-    background-color: #F6F0E9;
     border: solid 0.01rem #450920;
     border-radius: 0.5rem;
     width: 100%;
@@ -119,24 +104,17 @@
     background-color: #A53860;
     opacity: 100%;
     color: white;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    border-radius: .8rem;
     transition: 0.3s;
+    border: none;
 }
 
 .btn-comentario:hover {
-    background-color: #A53860;
     opacity: 90%;
-    color: white;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 1rem;
-    box-shadow: 2px 2px 2px 2px rgb(246, 240, 233, 0.44);
 }
 
 .seccion-tarjetas {
