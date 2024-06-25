@@ -1,33 +1,23 @@
-.container-title{
-    background-color: #FFA5AB;
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+h1{
+    color: #000;
 }
 
-.container-slide-banner{
-    background-color: white;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Jost, sans-serif;
 }
 
-.container-slide-item-1{
-    background-color: white;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
+#banner{
+    background-image: url(../src/assets/index/banner-1.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.container-banner-1{
+#bannerCaja{
     background-color: white;
-    padding-top: 15rem;
-    padding-bottom: 15rem;
-}
-.container-slide-item-2{
-    background-color: white;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
-}
-.container-banner-2{
-    background-color: white;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
 }
