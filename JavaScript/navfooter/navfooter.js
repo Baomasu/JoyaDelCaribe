@@ -35,7 +35,7 @@ async function loadNavbar() {
 
                         <div class="tooltip-container">
                             <span class="tooltip-text">Registrarse</span>  
-                        <a href="./micarrito.html" class="col-4">
+                        <a href="./registro.html" class="col-4">
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
                                 class="bi bi-person-plus" viewBox="0 0 16 16">
