@@ -10,28 +10,48 @@ async function loadNavbar() {
         <section class="container-fluid navbar-1">
         <section class="container">
             <div class="row">
-                <div class="col-2 navbarEscritorio">
+                <div class="col-10 navbarEscritorio">
                     <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
                 </div>
                 <div class="col-2  navbarMobil">
-                    <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
+                    <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logoMobil"></a>
                 </div>
 
-                <div class="col-8 navbarBuscador">
-                    <div class="input-group">
-                        <input type="text" class="form-control buscarCaja"
-                            placeholder="Buscar por número de parte o descripción" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2">
-                        <span class="input-group-text buscarBoton" id="basic-addon2">Buscar</span>
-                    </div>
-                </div>
 
                 <div class="col-2 navbarEscritorio">
                     <div class="row">
-                        <a href="./miPerfil.html" class="col-5"><img src="src/assets/profilePictures/Usuario.png" class="logo"></a>
-                        <a href="./micarrito.html" class="col-4"><img src="src/assets/profilePictures/Carrito.png" class="logo"></a>
+                        <div class="tooltip-container">
+                            <span class="tooltip-text">Administrador</span>
+                            <a href="./miPerfil.html" class="col-5">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
+                                    class="bi bi-person-gear" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                                </svg>
+                                
+                                <img src="" class="logoAdmi"></a> 
+                        </div>
+
+                        <div class="tooltip-container">
+                            <span class="tooltip-text">Registrarse</span>  
+                        <a href="./micarrito.html" class="col-4">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
+                                class="bi bi-person-plus" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                <path fill-rule="evenodd"
+                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+                            </svg>
+
+                            <img src="" class="logoRegis"></a>
+                        </div>
                     </div>
                 </div>
+
+                <!-------------      vanbar mobil  ------------------------>
+
                 <div class="col-10 navbarMobil">
                     <p class="d-inline-flex gap-1 collapse-p"
                         style="display:flex !important; justify-content: flex-end;">
@@ -44,18 +64,30 @@ async function loadNavbar() {
             </div>
             <div class="collapse " id="collapseExample">
                 <div class="card-body-collapse">
-                    <div class="item-collapse"><a href="./miPerfil.html" class="enlacenavbar"><img
-                                src="./src/assets/profilePictures/Usuario.png" alt="">Mi
-                            Perfil</a></div>
-                    <div class="item-collapse"><a href="./micarrito.html" class="enlacenavbar"><img
-                                src="./src/assets/profilePictures/Carrito.png" alt="">Carrito</a>
+                    <div class="item-collapse"><a href="./miPerfil.html" class="enlacenavbar">
+
+                            <img src="" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
+                                class="bi bi-person-gear mobil" viewBox="2 0 16 16">
+                                <path
+                                    d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                            </svg> Administrador</a>
+
                     </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control buscarCaja"
-                            placeholder="Buscar por número de parte o descripción" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2">
-                        <span class="input-group-text buscarBoton" id="basic-addon2">Buscar</span>
+
+                    <div class="item-collapse"><a href="./registro.html" class="enlacenavbar">
+
+                            <img src="" alt="">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
+                                class="bi bi-person-plus mobil" viewBox=".4 0 16 16">
+                                <path
+                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                <path fill-rule="evenodd"
+                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+                            </svg> Registrarse</a>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -74,7 +106,8 @@ async function loadNavbar() {
                 </div>
             </div>
         </section>
-    </section>`);
+    </section>
+        `);
 
 
     main.insertAdjacentHTML('afterend',`

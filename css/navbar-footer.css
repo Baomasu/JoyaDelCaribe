@@ -1,13 +1,62 @@
 /* <-----------------------------Navbar-----------------------------> */
 
+.tooltip-container {
+    position: relative; /*relative: los elementos se posicionan de forma relativa a su posición normal.*/
+    display: inline-block;
+    padding: 2rem;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #DA627D;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 70%; /* Posiciona el tooltip bajo del elemento */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+
+
 .navbar-1{
     background-color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 .logo{
-    height: 4rem;
+    height: 12.5rem;
+    padding-left: 13rem;
 }
+
+.logoMobil{
+    height: 5rem;
+    text-align: left;
+}
+
+
+.bi bi-person-gear mobil{
+    margin-right: 10rem;
+}
+
+
+.navbarEscritorio{
+    text-align: center;
+}
+
+
 
 .card-body-collapse{
     background-color: #F9DBBD !important;
