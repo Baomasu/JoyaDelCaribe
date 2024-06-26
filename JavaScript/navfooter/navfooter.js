@@ -21,8 +21,8 @@ async function loadNavbar() {
                 <div class="col-2 navbarEscritorio">
                     <div class="row">
                         <div class="tooltip-container">
-                            <span class="tooltip-text">Administrador</span>
-                            <a href="./miPerfil.html" class="col-5">
+                            <span class="tooltip-text">Iniciar Sesion</span>
+                            <a href="./iniciosesion.html" class="col-5">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
                                     class="bi bi-person-gear" viewBox="0 0 16 16">
