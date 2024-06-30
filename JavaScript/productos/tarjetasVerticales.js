@@ -1,6 +1,4 @@
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
+const tarjetas = document.getElementById("tarjetas-verticales");
 function getData() {
     const promise = fetch('../JSONS/productos.json', { method: 'GET' });
     promise
@@ -20,8 +18,6 @@ function getData() {
 }
 getData();
 function listarProductos(productos) {
-    let tarjetas = document.getElementById("tarjetas-verticales");
-
     productos.forEach(product => {
         tarjetas.insertAdjacentHTML("beforeend", ` 
             <div class="card shadow rounded-bottom-5 p-0" style="width: 18rem;">
@@ -52,6 +48,20 @@ function listarProductos(productos) {
                 </div>
             </div>
 `);
-    }); {
-    }
+    });
 }
+
+document.querySelectorAll('.categoria-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const categoria = this.getAttribute('data-categoria');
+        fetch('../JSONS/productos.json')
+            .then(response => response.json())
+            .then(productos => {
+                console.log(productos);
+                const productosFiltrados = productos.productos.filter(productos => productos.category === categoria);
+                console.log(productosFiltrados);
+                tarjetas.innerHTML = '';
+                listarProductos(productosFiltrados);
+            });
+    });
+});

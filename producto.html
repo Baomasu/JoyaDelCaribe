@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/navbar-footer.css">
     <link rel="stylesheet" href="./css/T-vertical.css">
     <script src="./JavaScript/navfooter/navfooter.js" defer></script>
-    <script src="./JavaScript/productos/tarjetasVerticales.js"></script>
+    <script src="./JavaScript/productos/tarjetasVerticales.js" defer></script>
     <script src="./JavaScript/productos/tarjetaHorizontal.js" defer></script>
 
 
@@ -44,22 +44,28 @@
             <div class="container">
                 <!-- Filtro -->
                 <div class="row justify-content-between" style="padding-top: 5rem;">
-                    <div class="col-4">
-                        <h4>Conoce nuestros productos:</h4>
+                    <div class="text-center pb-5">
+                        <h6>NEW ARRIVALS</h6>
+                        <h1>PERFECT MATCH</h1>
                     </div>
-                    <!-- <div class="col-3"><select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select></div> -->
                 </div>
             </div>
-
-            <section class="container mb-5" id="clean-product">
-                <div class="row d-flex justify-content-center gap-5" id="tarjetas-verticales">
-                </div>
+            <section class="container mb-5">
+                <div class="row">
+                <!-- <div class="col-2"> -->
+                    <div class="col-2 d-flex flex-column" id="categorias-menu">
+                        <h3 class="pb-3">Categorias</h3>
+                        <a class="categoria-btn pb-2" data-categoria="SkinCare">SkinCare</a>
+                        <a class="categoria-btn pb-2" data-categoria="Maquillaje">Maquillaje</a>
+                        <!-- Añade más botones según tus categorías -->
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="col-10"> -->
+                    <div class="col row d-flex justify-content-around row-gap-4" id="tarjetas-verticales">
+                    </div>
+                <!-- </div> -->
+                
+            </div>
             </section>
         </div>
 
