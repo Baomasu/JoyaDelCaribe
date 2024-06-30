@@ -36,8 +36,9 @@
     <main>
         <!-- Espacio donde se enconrará el cuerpo principal de la página -->
 
-        <div class="container-fluid titulo d-flex justify-content-center align-items-center">
-            <p>PRODUCTOS</p>
+        <div class="container-fluid titulo d-flex flex-column justify-content-center align-items-center">
+            <p class="fs-1">COLECCIÓN</p>
+            <p class="fs-6"><a href="./index.html" class="text-decoration-none" style="color: aliceblue;">Inicio</a> / Productos</p>
         </div>
 
         <div class="container-fluid">
@@ -51,21 +52,16 @@
                 </div>
             </div>
             <section class="container mb-5">
-                <div class="row">
-                <!-- <div class="col-2"> -->
-                    <div class="col-2 d-flex flex-column" id="categorias-menu">
-                        <h3 class="pb-3">Categorias</h3>
-                        <a class="categoria-btn pb-2" data-categoria="SkinCare">SkinCare</a>
-                        <a class="categoria-btn pb-2" data-categoria="Maquillaje">Maquillaje</a>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-2 d-flex flex-column align-items-center align-items-sm-start mb-5" id="categorias-menu" style="width: 160px;">
+                        <h3 class="pb-3">Categoría</h3>
+                        <a class="categoria-btn pb-2" data-categoria="SkinCare"><i class="bi bi-play-fill icono" style="display: none;"></i> SkinCare</a>
+                        <a class="categoria-btn pb-2" data-categoria="Maquillaje"><i class="bi bi-play-fill icono" style="display: none;"></i> Maquillaje</a>
                         <!-- Añade más botones según tus categorías -->
                     </div>
-                <!-- </div> -->
-                <!-- <div class="col-10"> -->
-                    <div class="col row d-flex justify-content-around row-gap-4" id="tarjetas-verticales">
+                    <div class="col row d-flex justify-content-center gap-4" id="tarjetas-verticales">
                     </div>
-                <!-- </div> -->
-                
-            </div>
+                </div>
             </section>
         </div>
 
@@ -92,34 +88,38 @@
         <div class="container-fluid">
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner" id="carousel-container">
-                    
-                  
+
+
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next"type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
                 </button>
-              </div>
+            </div>
         </div>
         <div class="container-fluid">
             <div id="carouselExample2" class="carousel slide">
                 <div class="carousel-inner" id="carousel-containerBS">
-                    
-                  
+
+
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon " aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next"type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
                 </button>
-              </div>
+            </div>
         </div>
 
     </main>

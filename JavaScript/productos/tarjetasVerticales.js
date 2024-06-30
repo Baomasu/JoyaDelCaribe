@@ -20,18 +20,18 @@ getData();
 function listarProductos(productos) {
     productos.forEach(product => {
         tarjetas.insertAdjacentHTML("beforeend", ` 
-            <div class="card shadow rounded-bottom-5 p-0" style="width: 18rem;">
+            <div class="card shadow rounded-bottom-5 p-0" style="width: 15rem;">
                 <img src="./src/assets/productssrc/${product.img}" class="card-img-top" alt="">
                 <div class=" card-body p-4">
-                    <h6 class="card-title text-end">${product.category}</h6>
+                    <p class="card-title text-end" style="color: gray;">${product.category}</p>
                     <h5 class="card-title">${product.name}</h5>
                     <div class="d-flex align-items-center mt-3">
-                        <span class="h6 mb-0">$${product.price}</span>
-                        <span class="badge bg-danger me-2 ms-4">15%</span>
+                        <span class="h6 mb-0">${descuentoTotal(product.discount, product.price)}</span>
+                        <span class="badge bg-danger me-2 ms-2">${descuento(product.discount)}</span>
                     </div>
                     <div class="d-flex align-items-center justify-content-between flex-row-reverse mt-2">
-                        <button type="button" class="btn btn-dark btnDetalles" data-bs-toggle="modal" data-bs-target="#${product.id}">Detalles</button>    
-                        <span class="h6 mb-0 text-decoration-line-through">$299.00</span>
+                        <button type="button" class="btn btn-dark btnDetalles rounded-4" data-bs-toggle="modal" data-bs-target="#${product.id}">Detalles</button>    
+                        <span class="h6 mb-0 text-decoration-line-through" style="color: gray;">${costoTotal(product.discount, product.price)}</span>
                         
                         <div class="modal fade" id="${product.id}" tabindex="-1" aria-labelledby="${product.id}" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
@@ -52,7 +52,7 @@ function listarProductos(productos) {
 }
 
 document.querySelectorAll('.categoria-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         const categoria = this.getAttribute('data-categoria');
         fetch('../JSONS/productos.json')
             .then(response => response.json())
@@ -65,3 +65,28 @@ document.querySelectorAll('.categoria-btn').forEach(btn => {
             });
     });
 });
+
+function descuento(discount) {
+    if (discount === 0) {
+        return '';
+    } else {
+        return discount + '%';
+    }
+}
+
+function costoTotal(discount, precio) {
+    if (discount === 0) {
+        return '';
+    } else {
+        return '$' + precio.toFixed(2);
+    }
+}
+
+function descuentoTotal(discount, precio) {
+    if (discount === 0) {
+        return '$' + precio.toFixed(2);
+    } else {
+        let operation = precio - (precio * (discount / 100));
+        return '$' + operation.toFixed(2);
+    }
+}
