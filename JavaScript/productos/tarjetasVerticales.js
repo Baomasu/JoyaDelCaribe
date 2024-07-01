@@ -5,8 +5,10 @@ function getData() {
         .then((response) => {
             response.json()
                 .then((productObj) => {
-
-                    listarProductos(productObj.productos);
+                    // pasar productObj al localStorage
+                    localStorage.setItem('productos', JSON.stringify(productObj.productos));
+                    productosLocal = JSON.parse(localStorage.getItem('productos'));
+                    listarProductos(productosLocal);
                 })
                 .catch((error) => {
                     console.log('Hubo un problema con el JSON ' + error);
@@ -20,7 +22,7 @@ getData();
 function listarProductos(productos) {
     productos.forEach(product => {
         tarjetas.insertAdjacentHTML("beforeend", ` 
-            <div class="card shadow rounded-bottom-5 p-0" style="width: 15rem;">
+            <div class="card shadow rounded-bottom-5 p-0" style="width: 16rem;">
                 <img src="./src/assets/productssrc/${product.img}" class="card-img-top" alt="">
                 <div class=" card-body p-4">
                     <p class="card-title text-end" style="color: gray;">${product.category}</p>
