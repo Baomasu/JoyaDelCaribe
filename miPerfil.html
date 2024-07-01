@@ -28,7 +28,7 @@
 <body>
     <main>
         <!-- Espacio donde se enconrará el cuerpo principal de la página -->
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-6">
                     <b class="txt-style">Nombre del producto:</b>
@@ -58,7 +58,37 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <section class="container-fluid d-flex justify-content-center my-5">
+
+            <div style="background-color:#F6F0E9;" class="d-flex flex-column justify-content-center formulario">
+                <h1 class="text-center py-4">CLIENTE REGISTRADO</h1>
+                <p>Por favor, ingrese su correo electrónico y contraseña:</p>
+                <form id="formRegistro"> <!--Commienza el formulario-->
+                    <div class="mb-3 pb-2">
+                        <label for="email" class="form-label fs-5">Dirección de correo electrónico</label>
+                        <input type="text" class="form-control" name="correo" placeholder="ejemplo@correo.com" id="email">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="emailAlert">
+                            El correo electrónico es obligatorio y debe ser válido.
+                        </div>
+                    </div>
+                    <div class="mb-3 pb-2">
+                        <label for="password" class="form-label fs-5">Contraseña</label>
+                        <input type="password" class="form-control" name="contraseña" id="password">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="passAlert">
+                            La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una
+                            letra
+                            minúscula, un número y un carácter especial.
+                        </div>
+                    </div>
+                    <button type="submit" class="registratebtn w-100 mb-5" id="newUser">
+                        <i class="bi bi-lock-fill"></i> INICIAR SESIÓN
+                    </button>
+                    <p>¿No tienes una cuenta? <a href="./registro.html" id="linkInicioSesion"">Crea una.</a></p>
+                </form> <!--termina el formulario-->
+            </div>
+        </section>
         <main>
 </body>
 

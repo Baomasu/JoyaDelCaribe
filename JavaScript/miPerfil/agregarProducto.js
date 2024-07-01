@@ -1,5 +1,3 @@
-
-
 /* <----------- BOTONES ------------> */
 let btnCrear = document.getElementById('btn-crear');
 let btnImagen = document.getElementById('btn-img');
