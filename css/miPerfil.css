@@ -2,27 +2,20 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+section{
+    color: #450920;
+}
+
 .formulario{
-    width: 500px;
-    /* width: 50%; */
     background-color: #FFA5AB;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 30px;
 }
 
 .form-control{
     border-radius: .7rem;
-    border-color: #450920;
-}
-
-/* quitar decoracion y color a los links */
-#linkInicioSesion{
-    text-decoration: none;
-    color: #450920;
-}
-
-#linkInicioSesion:hover{
-    color: #A53860;
+    border-color: #c29393;
 }
 
 .registratebtn{
