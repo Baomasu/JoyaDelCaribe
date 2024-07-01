@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Joya del Caribe</title>
+    <title>Administrador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -14,88 +14,117 @@
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 
+    <!-- cloudinary -->
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">
     </script>
 
+    <!-- bootstrap-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Archivos css js navbar y Footer-->
     <link rel="stylesheet" href="./css/navbar-footer.css">
     <link rel="stylesheet" href="./css/miPerfil.css">
     <script src="./JavaScript/navfooter/navfooter.js" defer></script>
     <script src="./JavaScript/miPerfil/agregarProducto.js" defer></script>
-
-
-
-
 </head>
 
 <body>
-    <Main>
-        <!-- Espacio donde se enconrará el cuerpo principal de la página -->
-        <section class="container-flud container-title"></section>
-        <section class="container-flud container-card-details"></section>
-        <section class="container-flud container-slide-item"></section>
-        <section class="container-flud">
-            <section class="container">
+    <main>
 
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-open-modal" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop">
-                    Crear nuevo producto
-                </button>
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <b class="txt-style">Nombre del producto:</b>
+                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Nombre"
+                        id="form-nombre">
+                    <b class="txt-style">Tipo de producto:</b>
+                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text"
+                        placeholder="Tipo de producto" id="form-tipo">
+                    <b class="txt-style">Detalles del producto:</b>
+                    <input class="col-12 txt-input-box" style="margin-bottom: 1rem;" type="text"
+                        placeholder="Detalles del producto" id="form-detalles">
+                    <b class="txt-style">Precio:</b>
+                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder=" 999.99"
+                        id="form-precio">
+                    <b class="txt-style">Categoría:</b>
+                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Categoría"
+                        id="form-categoria">
+                    <b class="txt-style">Imagen de producto:</b>
+                    <button type="button" style="margin-bottom: 1rem; margin-top: 1rem;" class=" col-4 btn-img"
+                        id="btn-img">Subir Imagen</button>
 
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 txt-style" id="staticBackdropLabel">Nuevo Producto</h1>
-                                <button type="button" style="margin-bottom: 2rem;" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row container">
-                                    <b class="txt-style">Nombre del producto:</b>
-                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Nombre" id="form-nombre">
-                                    <b class="txt-style">Tipo de producto:</b>
-                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Tipo de producto"
-                                        id="form-tipo">
-                                    <b class="txt-style">Detalles del producto:</b>
-                                    <input class="col-12 txt-input-box" style="margin-bottom: 1rem;" type="text" placeholder="Detalles del producto"
-                                        id="form-detalles">
-                                    <b class="txt-style">Precio:</b>
-                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder=" 999.99" id="form-precio">
-                                    <b class="txt-style">Categoría:</b>
-                                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Categoría"
-                                        id="form-categoria">
-                                    <b class="txt-style">Imagen de producto:</b>
-                                    <button type="button" style="margin-bottom: 1rem; margin-top: 1rem;"class=" col-4 btn-img" id="btn-img">Subir Imagen</button>
-
-                                    <div class="row">
-                                        <div class="alert alert-danger fade show col-lg-6 col-sm-12 text-center"
-                                            style="display:none;" role="alert" id="alertaValidaciones">
-                                            <p id="alerta-txt"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" style="margin-bottom: 1rem;"  class="btn btn-cerrar" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" style="margin-bottom: 1rem;" class="btn btn-crear" id="btn-crear">Crear</button>
-                            </div>
+                    <div class="row">
+                        <div class="alert alert-danger fade show col-lg-6 col-sm-12 text-center" style="display:none;"
+                            role="alert" id="alertaValidaciones">
+                            <p id="alerta-txt"></p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div> -->
 
-
-            </section>
+        <section class="container d-flex justify-content-center my-5">
+            <div class="formulario col-8" style="background-color:#F6F0E9;">
+                <h1 class="text-center py-4">AGREGAR PRODUCTO</h1>
+                <p>Por favor, ingrese los datos del producto:</p>
+                <form id="formRegistro" class="row"> <!--Commienza el formulario-->
+                    <div class="mb-3 pb-2 col-6">
+                        <label for="nombre" class="form-label fs-5">Nombre</label>
+                        <input type="text" class="form-control form-control-lg" name="name" id="nombre">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="nameAlert">
+                            El nombre es obligatorio y debe ser válido.
+                        </div>
+                    </div>
+                    <div class="mb-3 pb-2 col-6">
+                        <label for="categoria" class="form-label fs-5">Categoría</label>
+                        <input type="text" class="form-control form-control-lg" name="category" id="categoria">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="categoryAlert">
+                            La categoría es obligatoria y debe ser válida.
+                        </div>
+                    </div>
+                    <div class="mb-3 pb-2 col-6">
+                        <label for="precio" class="form-label fs-5">Precio</label>
+                        <input type="number" class="form-control form-control-lg" name="price" id="precio">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="priceAlert">
+                            El precio es obligatorio y debe ser válido.
+                        </div>
+                    </div>
+                    <div class="mb-3 pb-2 col-6">
+                        <label for="descuento" class="form-label fs-5">Descuento</label>
+                        <input type="number" class="form-control form-control-lg" name="discount" id="descuento" min="0"
+                            max="100" step="1">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="discountAlert">
+                            El descuento es obligatorio y debe ser válido.
+                        </div>
+                    </div>
+                    <div class="mb-3 pb-2">
+                        <label for="tipo" class="form-label fs-5">Tipo</label>
+                        <input type="text" class="form-control form-control-lg" name="type" id="tipo">
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="typeAlert">
+                            El tipo es obligatorio y debe ser válido.
+                        </div>
+                    </div>
+                    <div class="mb-3 pb-2">
+                        <label for="descripcion" class="form-label fs-5">Descripción</label>
+                        <textarea class="form-control form-control-lg" name="description" id="descripcion"
+                            rows="3"></textarea>
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="descriptionAlert">
+                            La descripcion es obligatoria y debe ser válida.
+                        </div>
+                    </div>
+                    <div>
+                        <a id="btn-img" class="cloudinary-button">Cargar imagen</a>
+                    </div>
+                    <div>
+                        <button type="submit" class="registratebtn mb-5" id="btn-crear">
+                            <i class="bi bi-bag-check"></i> Agregar producto
+                        </button>
+                    </div>
+                </form> <!--termina el formulario-->
+            </div>
         </section>
-
-
-
-    </Main>
-
+        <main>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

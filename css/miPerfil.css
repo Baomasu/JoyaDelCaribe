@@ -2,124 +2,38 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.container-title {
+section{
+    color: #450920;
+}
+
+.formulario{
     background-color: #FFA5AB;
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 30px;
 }
 
-.container-card-details {
-    background-color: white;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
+.form-control{
+    border-radius: .7rem;
+    border-color: #c29393;
 }
 
-.container-slide-item {
-    background-color: white;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
-}
-
-.btn-open-modal {
-    background-color: #FFA5AB;
+.registratebtn{
+    background-color: #A53860;
     color: white;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 1rem;
+    padding:.9rem ;
+    font-size: 1.5rem;
+    border-radius: .6rem;
+    border: none;
+    transition: 0.3s;
 }
 
-.btn-open-modal:hover {
-    background-color: #FFA5AB;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 1rem;
+.registratebtn:hover{
+    background-color: #c97392;
 }
 
-.btn-cerrar {
-    background-color: #FFA5AB;
-    color: #450920;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 1rem;
-}
-
-.btn-crear {
-    background-color: #FFA5AB;
-    color: #450920;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 1rem;
-}
-
-
-.txt-input {
-    background-color: white;
-    border: solid 0.1rem;
-    border-radius: 0.5rem;
-    color: #450920;
-    opacity: 80%;
-
-}
-
-.txt-input::placeholder {
-    background-color: white;
-    border: solid 0.1rem;
-    border-radius: 0.5rem;
-    color: #450920;
-    opacity: 80%;
-}
-
-.txt-input-box {
-    height: 3.5rem;
-    background-color: white;
-    border: solid 0.1rem;
-    border-radius: 0.5rem;
-    color: #450920;
-    opacity: 80%;
-}
-
-.txt-input-box::placeholder {
-    background-color: white;
-    border: solid 0.1rem;
-    border-radius: 0.5rem;
-    color: #450920;
-    opacity: 80%;
-}
-
-.btn-img {
-    background-color: #F9DBBD;
-    color: #450920;
-    border-radius: 0.5rem;
-}
-
-.modal-content {
-    background-color: #A53860 !important;
-    border: none !important;
-}
-
-.txt-style {
-    color: white;
-}
-
-
-.comentario-form {
-    background-color: #F6F0E9;
-    border: solid 0.01rem #450920;
-    border-radius: 0.5rem;
-    height: 3.5rem;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-.comentario-form::placeholder {
-    color: #DA627D;
-    opacity: 1;
+@media screen and (max-width: 1024px) {
+    .formulario{
+        border-radius: 30px;
+    }
 }
