@@ -76,7 +76,9 @@ function validateForm(event) {
     }
 
     if (isValid) {
-        sendData(); //push a arreglo de json
+        // sendData(); //push a arreglo de json
+        const main = document.getElementById('main');
+        main
 
         Swal.fire({
             icon: "success",
