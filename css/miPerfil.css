@@ -29,8 +29,25 @@ section{
 }
 
 .registratebtn:hover{
-    background-color: #c97392;
+    background-color: #a75271;
 }
+
+#btn-img{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #0064fa;
+    color: white;
+    padding:.9rem ;
+    font-size: 1.5rem;
+    border-radius: .6rem;
+    border: none;
+    transition: 0.3s;
+}
+
+#btn-img:hover{
+    background-color: #3385ff;
+}
+
 
 @media screen and (max-width: 1024px) {
     .formulario{

@@ -30,92 +30,70 @@
 
 <body>
     <main>
-
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <b class="txt-style">Nombre del producto:</b>
-                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Nombre"
-                        id="form-nombre">
-                    <b class="txt-style">Tipo de producto:</b>
-                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text"
-                        placeholder="Tipo de producto" id="form-tipo">
-                    <b class="txt-style">Detalles del producto:</b>
-                    <input class="col-12 txt-input-box" style="margin-bottom: 1rem;" type="text"
-                        placeholder="Detalles del producto" id="form-detalles">
-                    <b class="txt-style">Precio:</b>
-                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder=" 999.99"
-                        id="form-precio">
-                    <b class="txt-style">Categoría:</b>
-                    <input class="col-12 txt-input" style="margin-bottom: 1rem;" type="text" placeholder="Categoría"
-                        id="form-categoria">
-                    <b class="txt-style">Imagen de producto:</b>
-                    <button type="button" style="margin-bottom: 1rem; margin-top: 1rem;" class=" col-4 btn-img"
-                        id="btn-img">Subir Imagen</button>
-
-                    <div class="row">
-                        <div class="alert alert-danger fade show col-lg-6 col-sm-12 text-center" style="display:none;"
-                            role="alert" id="alertaValidaciones">
-                            <p id="alerta-txt"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <section class="container d-flex justify-content-center my-5">
-            <div class="formulario col-8" style="background-color:#F6F0E9;">
-                <h1 class="text-center py-4">AGREGAR PRODUCTO</h1>
+            <div class="formulario col col-lg-9" style="background-color:#F6F0E9;">
+                <h1 class="text-center pt-5">AGREGAR PRODUCTO</h1>
                 <p>Por favor, ingrese los datos del producto:</p>
                 <form id="formRegistro" class="row"> <!--Commienza el formulario-->
-                    <div class="mb-3 pb-2 col-6">
+                    <div class="mb-3 pb-2 col-12 col-lg-6">
                         <label for="nombre" class="form-label fs-5">Nombre</label>
-                        <input type="text" class="form-control form-control-lg" name="name" id="nombre">
+                        <input type="text" class="form-control form-control-lg" name="name" id="nombre" maxLength="100">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="nameAlert">
-                            El nombre es obligatorio y debe ser válido.
+                            El nombre es obligatorio y debe contener al menos 3 letras. Puede incluir números y el guion
+                            ('-').
                         </div>
                     </div>
-                    <div class="mb-3 pb-2 col-6">
+                    <div class="mb-3 pb-2 col-12 col-lg-6">
                         <label for="categoria" class="form-label fs-5">Categoría</label>
-                        <input type="text" class="form-control form-control-lg" name="category" id="categoria">
+                        <input type="text" class="form-control form-control-lg" name="category" id="categoria"
+                            maxLength="100">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="categoryAlert">
-                            La categoría es obligatoria y debe ser válida.
+                            La categoría es obligatoria y debe contener al menos 3 letras. <br>
+                            Puede incluir números y el guion ('-').
                         </div>
                     </div>
                     <div class="mb-3 pb-2 col-6">
                         <label for="precio" class="form-label fs-5">Precio</label>
                         <input type="number" class="form-control form-control-lg" name="price" id="precio">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="priceAlert">
-                            El precio es obligatorio y debe ser válido.
+                            El precio es obligatorio. <br>
+                            Debe contener números con o sin decimales.
                         </div>
                     </div>
                     <div class="mb-3 pb-2 col-6">
                         <label for="descuento" class="form-label fs-5">Descuento</label>
-                        <input type="number" class="form-control form-control-lg" name="discount" id="descuento" min="0"
+                        <input type="number" class="form-control form-control-lg" list="datalistOptions" name="discount" id="descuento" min="0"
                             max="100" step="1">
+                        <datalist id="datalistOptions">
+                            <option value="0">Sin descuento</option>
+                            <option value="50">Mitad de precio</option>
+                        </datalist>
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="discountAlert">
-                            El descuento es obligatorio y debe ser válido.
+                            El descuento es obligatorio. <br>
+                            Debe ser un número entre 0 y 100 sin decimales.
                         </div>
                     </div>
                     <div class="mb-3 pb-2">
                         <label for="tipo" class="form-label fs-5">Tipo</label>
-                        <input type="text" class="form-control form-control-lg" name="type" id="tipo">
+                        <input type="text" class="form-control form-control-lg" name="type" id="tipo" maxLength="100">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="typeAlert">
-                            El tipo es obligatorio y debe ser válido.
+                            La tipo de producto es obligatorio y debe contener al menos 3 letras. <br>
+                            Puede incluir números y el guion ('-').
                         </div>
                     </div>
                     <div class="mb-3 pb-2">
                         <label for="descripcion" class="form-label fs-5">Descripción</label>
-                        <textarea class="form-control form-control-lg" name="description" id="descripcion"
+                        <textarea class="form-control form-control-lg" name="description" id="descripcion" maxLength="200"
                             rows="3"></textarea>
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="descriptionAlert">
-                            La descripcion es obligatoria y debe ser válida.
+                            La descripción es obligatoria y debe contener al menos 3 letras. <br>
+                            Puede incluir números y el guion ('-').
                         </div>
                     </div>
-                    <div>
-                        <a id="btn-img" class="cloudinary-button">Cargar imagen</a>
+                    <div class="mb-3 pb-2">
+                        <a id="btn-img"><i class="bi bi-image"></i> Cargar Imagen</a>
                     </div>
-                    <div>
+                    <div class="pb-2">
                         <button type="submit" class="registratebtn mb-5" id="btn-crear">
                             <i class="bi bi-bag-check"></i> Agregar producto
                         </button>
@@ -124,7 +102,7 @@
             </div>
         </section>
         <main>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

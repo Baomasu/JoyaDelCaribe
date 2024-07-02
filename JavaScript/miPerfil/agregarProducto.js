@@ -21,8 +21,9 @@ let descriptionAlert = document.getElementById("descriptionAlert")
 
 /* <----------- REGEX ------------> */
 // Este regex sigue permitiendo letras (tanto mayúsculas como minúsculas), acentos, el carácter ñ en ambas mayúsculas y minúsculas, espacios, apóstrofes y guiones. 
-let nombreRegex = /(?=.*(?:[A-Za-zÁÉÍÓÚáéíóúÑñ]{3}))[A-Za-zÁÉÍÓÚáéíóúÑñ\s'-]+$/;
-let precioRegex = /^[^\s]+$/; //Validar precio, que tenga al menos un digito y pueda o no estar acompañado de decimales
+let nombreRegex = /(?=.*(?:[A-Za-zÁÉÍÓÚáéíóúÑñ0-9-]{3}))[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s'-]+$/;
+let precioRegex = /^[0-9]+(?:\.[0-9]*)?$/; //Validar precio, que tenga al menos un digito y pueda o no estar acompañado de decimales
+let descuentoRegex = /^(?:100|\d{1,2})$/;
 
 /// Se da Click al botón de enviar
 btnCrear.addEventListener("click", validateForm);
@@ -63,7 +64,7 @@ function validateForm(event) {
     ) {
         isValid = false;
     }
-    if (!validacion(precioRegex, formDiscount, discountAlert)) {
+    if (!validacion(descuentoRegex, formDiscount, discountAlert)) {
         isValid = false;
     }
 
@@ -75,17 +76,27 @@ function validateForm(event) {
         isValid = false;
     }
 
+    if (!urlImg) {
+        Swal.fire({
+            icon: "error",
+            title: "¡Error!",
+            text: "¡Debe seleccionar una imagen!",
+            showConfirmButton: false,
+        });
+        isValid = false;
+    }
+
     if (isValid) {
         let productos = JSON.parse(localStorage.getItem('productos'));
         console.log(productos);
         // sendData(); //push a arreglo de json
         let objetoProducto = {
             "id": productos.length + 1,
-            "name": formName.value,
-            "product": formType.value,
-            "description": formDescription.value,
+            "name": formName.value.trim().replace(/\s+/g, ' '),
+            "product": formType.value.trim().replace(/\s+/g, ' '),
+            "description": formDescription.value.trim().replace(/\s+/g, ' '),
             "price": parseFloat(formPrice.value),
-            "category": formCategory.value,
+            "category": formCategory.value.trim().replace(/\s+/g, ' '),
             "img": urlImg,
             "discount": parseInt(formDiscount.value)
         }
