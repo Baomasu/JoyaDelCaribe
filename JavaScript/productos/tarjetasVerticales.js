@@ -1,6 +1,6 @@
 const tarjetas = document.getElementById("tarjetas-verticales");
 function getData() {
-    const promise = fetch('../JSONS/productos.json', { method: 'GET' });
+    const promise = fetch('../JSONS/productosURL.json', { method: 'GET' });
     promise
         .then((response) => {
             response.json()
@@ -30,7 +30,7 @@ function listarProductos(productos) {
     productos.forEach(product => {
         tarjetas.insertAdjacentHTML("beforeend", ` 
             <div class="card shadow rounded-bottom-5 p-0" style="width: 16rem;">
-                <img src="./src/assets/productssrc/${product.img}" class="card-img-top" alt="">
+                <img src="${product.img}" class="card-img-top" alt="">
                 <div class=" card-body p-4">
                     <p class="card-title text-end" style="color: gray;">${product.category}</p>
                     <h5 class="card-title">${product.name}</h5>
@@ -63,7 +63,7 @@ function listarProductos(productos) {
 document.querySelectorAll('.categoria-btn').forEach(btn => {
     btn.addEventListener('click', function () {
         const categoria = this.getAttribute('data-categoria');
-        fetch('../JSONS/productos.json')
+        fetch('../JSONS/productosURL.json')
             .then(response => response.json())
             .then(productos => {
                 console.log(productos);

@@ -158,7 +158,7 @@ function validacion(regex, form, alert) {
 
 // fetch de productos, si no existe en localStorage
 function getData() {
-    const promise = fetch('../JSONS/productos.json', { method: 'GET' });
+    const promise = fetch('../JSONS/productosURL.json', { method: 'GET' });
     promise
         .then((response) => {
             response.json()

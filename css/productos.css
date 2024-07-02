@@ -5,6 +5,16 @@
     background-position: center;
 }
 
+#followUs{
+    background-color: #F4EDEA;
+}
+
+.titutloSeccion{
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
 .titulo p{
     color: white;
     font-size: 3.4rem;
