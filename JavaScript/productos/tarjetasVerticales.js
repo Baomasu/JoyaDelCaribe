@@ -18,7 +18,14 @@ function getData() {
             console.log('Hubo un problema con la solicitud ' + error);
         });
 }
-getData();
+
+// verificar si existe productos en el localStorage
+if (!localStorage.getItem('productos')) {
+    getData();
+}
+
+listarProductos(JSON.parse(localStorage.getItem('productos')));
+
 function listarProductos(productos) {
     productos.forEach(product => {
         tarjetas.insertAdjacentHTML("beforeend", ` 

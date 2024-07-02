@@ -76,9 +76,23 @@ function validateForm(event) {
     }
 
     if (isValid) {
+        let productos = JSON.parse(localStorage.getItem('productos'));
+        console.log(productos);
         // sendData(); //push a arreglo de json
-        const main = document.getElementById('main');
-        main
+        let objetoProducto = {
+            "id": productos.length + 1,
+            "name": formName.value,
+            "product": formType.value,
+            "description": formDescription.value,
+            "price": parseFloat(formPrice.value),
+            "category": formCategory.value,
+            "img": urlImg,
+            "discount": parseInt(formDiscount.value)
+        }
+        // agregar objetoProducto a productos
+        productos.push(objetoProducto);
+        localStorage.setItem('productos', JSON.stringify(productos));
+
 
         Swal.fire({
             icon: "success",
@@ -129,4 +143,30 @@ function validacion(regex, form, alert) {
         alert.classList.add("d-none")
         return true;
     }
+}
+
+// fetch de productos, si no existe en localStorage
+function getData() {
+    const promise = fetch('../JSONS/productos.json', { method: 'GET' });
+    promise
+        .then((response) => {
+            response.json()
+                .then((productObj) => {
+                    // pasar productObj al localStorage
+                    localStorage.setItem('productos', JSON.stringify(productObj.productos));
+                    productosLocal = JSON.parse(localStorage.getItem('productos'));
+                    listarProductos(productosLocal);
+                })
+                .catch((error) => {
+                    console.log('Hubo un problema con el JSON ' + error);
+                });
+        })
+        .catch((error) => {
+            console.log('Hubo un problema con la solicitud ' + error);
+        });
+}
+
+// verificar si existe productos en el localStorage
+if (!localStorage.getItem('productos')) {
+    getData();
 }
