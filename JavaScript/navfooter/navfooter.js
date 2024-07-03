@@ -1,11 +1,5 @@
 let main = document.getElementsByTagName('main')[0];
 
-window.addEventListener('load',async () => {
-    await loadNavbar();
-    initializeFooterButton();
-});
-
-async function loadNavbar() {
     main.insertAdjacentHTML('beforebegin', `
         <div class="border-bottom py-2 bg-light">
         <div class="container">
@@ -23,10 +17,10 @@ async function loadNavbar() {
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light shadow-sm p-0">
         <div class="container">
             <a class="navbar-brand" href="../../index.html"><img src="../../src/assets/profilePictures/Logo.png" alt="Logo"
-                    style="width: 130px;"></a>
+                    style="width: 100px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,9 +53,7 @@ async function loadNavbar() {
     </nav>
         `);
 
-
     main.insertAdjacentHTML('afterend',`
-    
          <footer class="footer-section">
         <!-- row de bootstrap para definir una fila horizontal -->
         <!-- mx-auto es un margin en x de auto para centrar el contenido -->
@@ -138,13 +130,7 @@ async function loadNavbar() {
             </div>
         </div>
     </footer>
-
-        
         `);
-        await new Promise(resolve => setTimeout(resolve, 0));
-}
-
-
 
 function initializeFooterButton() {
     let correof = document.getElementById("correo-footer"); //correo
