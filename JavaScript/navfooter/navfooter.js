@@ -26,7 +26,7 @@ async function loadNavbar() {
     <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="../../index.html"><img src="../../src/assets/profilePictures/Logo.png" alt="Logo"
-                    style="width: 100px;"></a>
+                    style="width: 130px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
