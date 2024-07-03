@@ -7,106 +7,56 @@ window.addEventListener('load',async () => {
 
 async function loadNavbar() {
     main.insertAdjacentHTML('beforebegin', `
-        <section class="container-fluid navbar-1">
-        <section class="container">
+        <div class="border-bottom py-2 bg-light">
+        <div class="container">
             <div class="row">
-                <div class="col-10 navbarEscritorio">
-                    <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logo"></a>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3"><strong><i
+                                class="bi bi-envelope-open-fill"></i> info@joyadelcaribe.com</strong></span>
+                    <span class="me-3">
+                        <strong><i class="bi bi-telephone-fill"></i> +52-55-1234-5678</strong></span>
                 </div>
-                <div class="col-2  navbarMobil">
-                    <a href="./index.html"><img src="src/assets/profilePictures/Logo.png" alt="" class="logoMobil"></a>
-                </div>
-
-
-                <div class="col-2 navbarEscritorio">
-                    <div class="row">
-                        <div class="tooltip-container">
-                            <span class="tooltip-text">Administrador</span>
-                            <a href="./miPerfil.html" class="col-5">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
-                                    class="bi bi-person-gear" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-                                </svg>
-                                
-                                <img src="" class="logoAdmi"></a> 
-                        </div>
-
-                        <div class="tooltip-container">
-                            <span class="tooltip-text">Registrarse</span>  
-                        <a href="./registro.html" class="col-4">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
-                                class="bi bi-person-plus" viewBox="0 0 16 16">
-                                <path
-                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-                                <path fill-rule="evenodd"
-                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-                            </svg>
-
-                            <img src="" class="logoRegis"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-------------      vanbar mobil  ------------------------>
-
-                <div class="col-10 navbarMobil">
-                    <p class="d-inline-flex gap-1 collapse-p"
-                        style="display:flex !important; justify-content: flex-end;">
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            <img src="src/assets/profilePictures/menus.png">
-                        </a>
-                    </p>
+                <div
+                    class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
+                    <span class="me-3">Obtén un 20% de descuento en tu primer pedido. <a class="text-muted" href="../../registro.html"> Regístrate.</a></span>
                 </div>
             </div>
-            <div class="collapse " id="collapseExample">
-                <div class="card-body-collapse">
-                    <div class="item-collapse"><a href="./miPerfil.html" class="enlacenavbar">
-
-                            <img src="" alt="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
-                                class="bi bi-person-gear mobil" viewBox="2 0 16 16">
-                                <path
-                                    d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m.256 7a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382zM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
-                            </svg> Administrador</a>
-
-                    </div>
-
-                    <div class="item-collapse"><a href="./registro.html" class="enlacenavbar">
-
-                            <img src="" alt="">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
-                                class="bi bi-person-plus mobil" viewBox=".4 0 16 16">
-                                <path
-                                    d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-                                <path fill-rule="evenodd"
-                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-                            </svg> Registrarse</a>
-                    </div>
-
-                </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><img src="../../src/assets/profilePictures/Logo.png" alt="Logo"
+                    style="width: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" aria-current="page"
+                            href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="../../producto.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="../../nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="../../miPerfil.html">Agregar Producto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 text-uppercase" href="../../iniciosesion.html"><i
+                                class="me-1 text-muted"></i>
+                            <i class="bi bi-person-check-fill"></i> Cuenta</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </section>
-    <section class="container-fluid navbar-2">
-        <section class="container text-center">
-            <div class="row">
-                <div class="col-4">
-                    <a class="enlacenavbar" href="./index.html">Inicio</a>
-                </div>
-                <div class="col-4">
-                    <a class="enlacenavbar" href="./nosotros.html">Nosotros</a>
-                </div>
-                <div class="col-4">
-                    <a class="enlacenavbar" href="./producto.html">Productos</a>
-                </div>
-            </div>
-        </section>
-    </section>
+        </div>
+    </nav>
         `);
 
 
