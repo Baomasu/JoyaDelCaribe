@@ -111,8 +111,9 @@ function validateForm(event) {
             text: "¡Producto agregado con exito!",
             showConfirmButton: false,
         });
+        document.getElementById("formRegistro").reset();
     }
-
+    
 }
 function sendData() {
     const promise = fetch('../../JSONS/productos.json', { method: 'GET' });
@@ -181,3 +182,4 @@ function getData() {
 if (!localStorage.getItem('productos')) {
     getData();
 }
+

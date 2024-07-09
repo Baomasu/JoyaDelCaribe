@@ -52,6 +52,23 @@
                             Puede incluir números y el guion ('-').
                         </div>
                     </div>
+
+                    <!-- PRUEBA PARA AGREGAR LISTA DE CATEGORIAS AL CAMPO
+
+                    <div class="mb-3 pb-2 col-12 col-lg-6">
+                        <label for="categoria" class="form-label fs-5">Categoría</label>
+                        <input type="text" class="form-control form-control-lg" list="datalistOptions" name="category" id="categoria">
+                        <datalist id="datalistOptions">
+                            <option value="SkinCare">SkinCare</option>
+                            <option value="Maquillaje">Maquillaje</option>
+                        </datalist>
+                        <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="categoriaAlert">
+                            El campo es obligatorio. <br>
+                            Debes elegir alguna de las dos opciones.
+                        </div>
+                    </div>-->
+
+
                     <div class="mb-3 pb-2 col-6">
                         <label for="precio" class="form-label fs-5">Precio</label>
                         <input type="number" class="form-control form-control-lg" name="price" id="precio">
@@ -62,9 +79,9 @@
                     </div>
                     <div class="mb-3 pb-2 col-6">
                         <label for="descuento" class="form-label fs-5">Descuento</label>
-                        <input type="number" class="form-control form-control-lg" list="datalistOptions" name="discount" id="descuento" min="0"
+                        <input type="number" class="form-control form-control-lg" list="datalistOptions2" name="discount" id="descuento" min="0"
                             max="100" step="1">
-                        <datalist id="datalistOptions">
+                        <datalist id="datalistOptions2">
                             <option value="0">Sin descuento</option>
                             <option value="50">Mitad de precio</option>
                         </datalist>
