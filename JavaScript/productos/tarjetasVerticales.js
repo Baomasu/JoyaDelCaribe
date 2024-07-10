@@ -2,16 +2,16 @@ const tarjetas = document.getElementById("tarjetas-verticales");
 const mostrarTodo = document.getElementById("mostrar-todo");
 
 // verificar si existe productos en el localStorage
-if (!localStorage.getItem('productos')) {
-    getData();
-} else {
-    listarProductos(JSON.parse(localStorage.getItem('productos')));
-}
+// if (!localStorage.getItem('productos')) {
+//     getData();
+// } else {
+//     listarProductos(JSON.parse(localStorage.getItem('productos')));
+// }
 
-mostrarTodo.addEventListener('click', () => {
-    tarjetas.innerHTML = '';
-    listarProductos(JSON.parse(localStorage.getItem('productos')));
-});
+// mostrarTodo.addEventListener('click', () => {
+//     tarjetas.innerHTML = '';
+//     listarProductos(JSON.parse(localStorage.getItem('productos')));
+// });
 
 function getData() {
     const promise = fetch('../JSONS/productosURL.json', { method: 'GET' });

@@ -50,6 +50,10 @@ function validateForm(event) {
         let userExists = storedUsers.find(user => user.email === formEmail.value.trim().toLowerCase() && user.password === formPassword.value);
 
         if (userExists) {
+            let token = inicioSesion(newUser.email, newUser.password);
+            // mandar la respuesta de la api (token) a localStorage
+            localStorage.setItem('token', token);
+
             addUser(newUser);
             document.getElementById('newUser').disabled = true;
 
@@ -69,8 +73,8 @@ function validateForm(event) {
 
         } else {
             console.log("Correo electrónico o contraseña incorrectos.");
-            
-            
+
+
             formEmail.classList.remove("is-valid")
             formEmail.classList.add("is-invalid")
             formPassword.classList.remove("is-valid")
@@ -103,4 +107,26 @@ function validacion(regex, form, alert) {
         alert.innerText = `El campo ingresado cumple con los requisitos de formato.`;
         return true;
     }
+}
+
+function inicioSesion(correo, contrasena) {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+        "correo": correo,
+        "contrasena": contrasena
+    });
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch("http://localhost:8080/api/login/", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {return result})
+        .catch((error) => console.error(error));
 }
