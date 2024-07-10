@@ -70,15 +70,23 @@ function listarProductos(productos) {
 document.querySelectorAll('.categoria-btn').forEach(btn => {
     btn.addEventListener('click', function () {
         const categoria = this.getAttribute('data-categoria');
-        fetch('../JSONS/productosURL.json')
-            .then(response => response.json())
-            .then(productos => {
-                console.log(productos);
-                const productosFiltrados = productos.productos.filter(productos => productos.category === categoria);
-                console.log(productosFiltrados);
-                tarjetas.innerHTML = '';
-                listarProductos(productosFiltrados);
-            });
+
+        // hacer filtrado desde local storage
+        const productos = JSON.parse(localStorage.getItem('productos'));
+        const productosFiltrados = productos.filter(productos => productos.category === categoria);
+        tarjetas.innerHTML = '';
+        listarProductos(productosFiltrados);
+
+
+        // fetch('../JSONS/productosURL.json')
+        //     .then(response => response.json())
+        //     .then(productos => {
+        //         console.log(productos);
+        //         const productosFiltrados = productos.productos.filter(productos => productos.category === categoria);
+        //         console.log(productosFiltrados);
+        //         tarjetas.innerHTML = '';
+        //         listarProductos(productosFiltrados);
+        //     });
     });
 });
 
