@@ -94,13 +94,13 @@ function costoTotal(discount, precio) {
     if (discount === 0) {
         return '';
     } else {
-        return '$' + precio.toFixed(2);
+        return '$' + precio;
     }
 }
 
 function descuentoTotal(discount, precio) {
     if (discount === 0) {
-        return '$' + precio.toFixed(2);
+        return '$' + precio;
     } else {
         let operation = precio - (precio * (discount / 100));
         return '$' + operation.toFixed(2);

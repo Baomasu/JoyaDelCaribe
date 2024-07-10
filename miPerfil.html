@@ -37,24 +37,28 @@
                 <form id="formRegistro" class="row"> <!--Commienza el formulario-->
                     <div class="mb-3 pb-2 col-12 col-lg-6">
                         <label for="nombre" class="form-label fs-5">Nombre</label>
-                        <input type="text" class="form-control form-control-lg" name="name" id="nombre" maxLength="100">
+                        <input type="text" class="form-control form-control-lg border-color" name="name" id="nombre" maxLength="100">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="nameAlert">
-                            El nombre es obligatorio y debe contener al menos 3 letras. Puede incluir números y el guion
-                            ('-').
+                            El nombre es obligatorio. <br>
+                            Debe contener al menos 3 letras.
                         </div>
                     </div>
                     <div class="mb-3 pb-2 col-12 col-lg-6">
                         <label for="categoria" class="form-label fs-5">Categoría</label>
-                        <input type="text" class="form-control form-control-lg" name="category" id="categoria"
-                            maxLength="100">
+                        <select class="form-select form-select-lg border-color" name="category" id="categoria" aria-label="Selecciona una categoría de producto">
+                            <option selected value="">Selecciona una opción</option>
+                            <option value="SkinCare">SkinCare</option>
+                            <option value="Maquillaje">Maquillaje</option>
+                        </select>
+                        <!-- <input type="text" class="form-control form-control-lg" name="category" 
+                            maxLength="100"> -->
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="categoryAlert">
-                            La categoría es obligatoria y debe contener al menos 3 letras. <br>
-                            Puede incluir números y el guion ('-').
+                            La categoría es obligatoria.
                         </div>
                     </div>
                     <div class="mb-3 pb-2 col-6">
                         <label for="precio" class="form-label fs-5">Precio</label>
-                        <input type="number" class="form-control form-control-lg" name="price" id="precio">
+                        <input type="number" class="form-control form-control-lg border-color" name="price" id="precio">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="priceAlert">
                             El precio es obligatorio. <br>
                             Debe contener números con o sin decimales.
@@ -62,8 +66,8 @@
                     </div>
                     <div class="mb-3 pb-2 col-6">
                         <label for="descuento" class="form-label fs-5">Descuento</label>
-                        <input type="number" class="form-control form-control-lg" list="datalistOptions" name="discount" id="descuento" min="0"
-                            max="100" step="1">
+                        <input type="number" class="form-control form-control-lg border-color" list="datalistOptions" name="discount" id="descuento" min="0"
+                            max="100" step="1" placeholder="Número del 0 al 100">
                         <datalist id="datalistOptions">
                             <option value="0">Sin descuento</option>
                             <option value="50">Mitad de precio</option>
@@ -75,19 +79,19 @@
                     </div>
                     <div class="mb-3 pb-2">
                         <label for="tipo" class="form-label fs-5">Tipo</label>
-                        <input type="text" class="form-control form-control-lg" name="type" id="tipo" maxLength="100">
+                        <input type="text" class="form-control form-control-lg border-color" name="type" id="tipo" maxLength="100">
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="typeAlert">
-                            La tipo de producto es obligatorio y debe contener al menos 3 letras. <br>
-                            Puede incluir números y el guion ('-').
+                            El tipo de producto es obligatorio. <br>
+                            Debe contener al menos 3 letras.
                         </div>
                     </div>
                     <div class="mb-3 pb-2">
                         <label for="descripcion" class="form-label fs-5">Descripción</label>
-                        <textarea class="form-control form-control-lg" name="description" id="descripcion" maxLength="200"
+                        <textarea class="form-control form-control-lg border-color" name="description" id="descripcion" maxLength="200"
                             rows="3"></textarea>
                         <div class="alert alert-danger mb-0 mt-2 rounded-3 d-none" role="alert" id="descriptionAlert">
-                            La descripción es obligatoria y debe contener al menos 3 letras. <br>
-                            Puede incluir números y el guion ('-').
+                            La descripción es obligatoria. <br>
+                            Debe contener al menos 3 letras.
                         </div>
                     </div>
                     <div class="mb-3 pb-2">

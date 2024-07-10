@@ -13,9 +13,9 @@ section{
     border-radius: 30px;
 }
 
-.form-control{
-    border-radius: .7rem;
-    border-color: #c29393;
+.border-color{
+    border-radius: .8rem;
+    border-color: #eed9d9;
 }
 
 .registratebtn{

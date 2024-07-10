@@ -1,5 +1,19 @@
 let main = document.getElementsByTagName('main')[0];
 
+// cargar los datos de local storage
+let user = JSON.parse(localStorage.getItem('userLogin'));
+// imprimir en consola el name
+//console.log(user[0].name);
+let nombre = "";
+
+if (user) {
+    nombre = user[0].name;
+} else {
+    nombre = "Cuenta";
+}
+
+
+
     main.insertAdjacentHTML('beforebegin', `
         <div class="border-bottom py-2 bg-light">
         <div class="container">
@@ -45,7 +59,7 @@ let main = document.getElementsByTagName('main')[0];
                     <li class="nav-item">
                         <a class="nav-link mx-2 text-uppercase" href="../../iniciosesion.html"><i
                                 class="me-1 text-muted"></i>
-                            <i class="bi bi-person-check-fill"></i> Cuenta</a>
+                            <i class="bi bi-person-check-fill"></i> ${nombre}</a>
                     </li>
                 </ul>
             </div>
