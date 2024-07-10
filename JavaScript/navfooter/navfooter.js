@@ -1,30 +1,15 @@
 let main = document.getElementsByTagName('main')[0];
 
-// cargar los datos de usuarios (local storage()
-let user = JSON.parse(localStorage.getItem('userArray'));
-let login = JSON.parse(localStorage.getItem('userLogin'));
+// Cargar los datos de usuarios desde localStorage
+const user = JSON.parse(localStorage.getItem('userArray')) || [];
+const login = JSON.parse(localStorage.getItem('userLogin')) || [];
 
-if (user == null) {
-    user = "";
-}else{
-    var nombreUser = user[0].email;
-}
+// Usar operador ternario para simplificar la asignación de valores
+const nombreUser = user.length > 0 ? user[0].email : "";
+const nombreLogin = login.length > 0 ? login[0].email : "";
 
-if (login == null) {
-    login = "";
-}else{
-    var nombreLogin = login[0].email;
-}
-
-let nombre = "";
-
-if (nombreUser == nombreLogin) {
-    nombre = user[0].name;
-} else {
-    nombre = "Cuenta";
-}
-
-
+// Asignar nombre basado en la comparación de correos, con operador ternario
+const nombreCuenta = nombreUser === nombreLogin && user.length > 0 ? user[0].name : "Cuenta";
 
     main.insertAdjacentHTML('beforebegin', `
         <div class="border-bottom py-2 bg-light">
@@ -70,7 +55,7 @@ if (nombreUser == nombreLogin) {
                     <ul class="navbar-nav ms-auto">
                         <div class="dropdown mb-3">
                             <a class="btn btn-secondary dropdown-toggle mx-2 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-check-fill"></i> ${nombre}
+                                <i class="bi bi-person-check-fill"></i> ${nombreCuenta}
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="../../iniciosesion.html">Iniciar Sesión</a></li>

@@ -43,7 +43,6 @@ function validateForm(event) {
             email: formEmail.value.trim().toLowerCase(),
             password: formPassword.value,
         }
-        addUser(newUser);
         // Obtener usuarios de localStorage
         let storedUsers = JSON.parse(localStorage.getItem('userArray')) || [];
         console.log(storedUsers);
@@ -51,6 +50,7 @@ function validateForm(event) {
         let userExists = storedUsers.find(user => user.email === formEmail.value.trim().toLowerCase() && user.password === formPassword.value);
 
         if (userExists) {
+            addUser(newUser);
             document.getElementById('newUser').disabled = true;
 
             emailAlert.classList.add("d-none")
