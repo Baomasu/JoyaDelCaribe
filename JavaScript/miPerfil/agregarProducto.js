@@ -88,23 +88,23 @@ function validateForm(event) {
     }
 
     if (isValid) {
-        let productos = JSON.parse(localStorage.getItem('productos'));
-        console.log(productos);
+        //let productos = JSON.parse(localStorage.getItem('productos'));
+        //console.log(productos);
         // sendData(); //push a arreglo de json
         let objetoProducto = {
-            "id": productos.length + 1,
-            "name": formName.value.trim().replace(/\s+/g, ' '),
-            "product": formType.value.trim().replace(/\s+/g, ' '),
-            "description": formDescription.value.trim().replace(/\s+/g, ' '),
-            "price": parseFloat(formPrice.value).toFixed(2),
-            "category": formCategory.value.trim().replace(/\s+/g, ' '),
-            "img": urlImg,
-            "discount": parseInt(formDiscount.value)
+            //"id": productos.length + 1,
+            "nombre": formName.value.trim().replace(/\s+/g, ' '),
+            "producto": formType.value.trim().replace(/\s+/g, ' '), //"tipo"
+            "precio": parseFloat(formPrice.value).toFixed(2),
+            "imagen": urlImg,
+            "categoria": formCategory.value.trim().replace(/\s+/g, ' '),
+            "descripcion": formDescription.value.trim().replace(/\s+/g, ' '),
+            "descuento": parseInt(formDiscount.value)
         }
         // agregar objetoProducto a productos
-        productos.push(objetoProducto);
-        localStorage.setItem('productos', JSON.stringify(productos));
-
+        //productos.push(objetoProducto);
+        //localStorage.setItem('productos', JSON.stringify(productos));
+        sendData(objetoProducto);
 
         Swal.fire({
             icon: "success",
@@ -133,22 +133,46 @@ function validateForm(event) {
     }
     
 }
-function sendData() {
-    const promise = fetch('../../JSONS/productos.json', { method: 'GET' });
+
+//funcion obtener token de local storage - pendiente
+
+function sendData(objetoProducto) {
+    const myHeaders = new Headers();
+    myHeaders.append("Authorization", "Bearer: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWNvQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTklTVFJBRE9SIiwiaWF0IjoxNzIwNTk1ODUwLCJleHAiOjE3MjA2MzE4NTB9.B5Qquxm73YJt8zfPgFVGOsNWY1NIxTPOduvRX-8sGPs");
+    myHeaders.append("Content-Type", "application/json");
+    
+    const raw = JSON.stringify(objetoProducto);
+    
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+    
+    fetch("http://localhost:8080/api/productos/", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.error(error));
+
+
+
+    //const promise = fetch('../../JSONS/productos.json', { method: 'GET' });
+    const promise = fetch('http://localhost:8080/api/productos/', { method: 'GET' });
     promise
         .then((response) => {
             response.json()
                 .then((productObj) => {
                     productObj.productos.push(
                         {
-                            "id": productObj.productos.length + 1,
-                            "name": formName.value,
-                            "product": formType.value,
-                            "description": formDescription.value,
-                            "price": formPrice.value,
-                            "category": formCategory.value,
-                            "img": urlImg,
-                            "discount": formDiscount.value
+                            //"id": productObj.productos.length + 1,
+                            "nombre": formName.value,
+                            "producto": formType.value, 
+                            "precio": formPrice.value,
+                            "imagen": urlImg,
+                            "categoria": formCategory.value,
+                            "descripcion": formDescription.value,
+                            "descuento": formDiscount.value
                         }
                     );
                     console.log(productObj.productos[productObj.productos.length - 1]);
@@ -177,7 +201,7 @@ function validacion(regex, form, alert) {
 
 // fetch de productos, si no existe en localStorage
 function getData() {
-    const promise = fetch('../JSONS/productosURL.json', { method: 'GET' });
+    const promise = fetch('http://localhost:8080/api/productos/', { method: 'GET' });
     promise
         .then((response) => {
             response.json()
