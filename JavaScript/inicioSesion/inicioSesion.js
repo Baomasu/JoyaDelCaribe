@@ -65,7 +65,7 @@ function validateForm(event) {
             });
             setTimeout(() => {
                 window.location.href = "../index.html";
-            }, 3000);
+            }, 2000);
 
         } else {
             console.log("Correo electrónico o contraseña incorrectos.");

@@ -1,12 +1,24 @@
 let main = document.getElementsByTagName('main')[0];
 
-// cargar los datos de local storage
-let user = JSON.parse(localStorage.getItem('userLogin'));
-// imprimir en consola el name
-//console.log(user[0].name);
+// cargar los datos de usuarios (local storage()
+let user = JSON.parse(localStorage.getItem('userArray'));
+let login = JSON.parse(localStorage.getItem('userLogin'));
+
+if (user == null) {
+    user = "";
+}else{
+    var nombreUser = user[0].email;
+}
+
+if (login == null) {
+    login = "";
+}else{
+    var nombreLogin = login[0].email;
+}
+
 let nombre = "";
 
-if (user) {
+if (nombreUser == nombreLogin) {
     nombre = user[0].name;
 } else {
     nombre = "Cuenta";
@@ -55,20 +67,26 @@ if (user) {
                         <a class="nav-link mx-2 text-uppercase" href="../../miPerfil.html">Agregar Producto</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link mx-2 text-uppercase" href="../../iniciosesion.html"><i
-                                class="me-1 text-muted"></i>
-                            <i class="bi bi-person-check-fill"></i> ${nombre}</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <div class="dropdown mb-3">
+                            <a class="btn btn-secondary dropdown-toggle mx-2 text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-check-fill"></i> ${nombre}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../iniciosesion.html">Iniciar Sesión</a></li>
+                                <li><a class="dropdown-item" href="../../registro.html">Registrarse</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" onclick="cerrarSesion();" href="../../iniciosesion.html"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </ul>
             </div>
         </div>
     </nav>
         `);
 
     main.insertAdjacentHTML('afterend',`
-         <footer class="footer-section">
+        <footer class="footer-section">
         <!-- row de bootstrap para definir una fila horizontal -->
         <!-- mx-auto es un margin en x de auto para centrar el contenido -->
         <!-- pt-5 es un padding en la parte superior de 5 -->
@@ -174,5 +192,17 @@ function initializeFooterButton() {
         });
     } else {
         console.error("Elementos del DOM no encontrados");
+    }
+}
+
+initializeFooterButton();
+
+function cerrarSesion() {
+    let sesion = JSON.parse(localStorage.getItem('userLogin'));
+    if (sesion == null) {
+        sesion = "";
+    } else {
+        localStorage.removeItem('userLogin');
+
     }
 }

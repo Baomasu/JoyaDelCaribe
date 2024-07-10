@@ -90,7 +90,7 @@ function validateForm(event) {
         });
         setTimeout(() => {
             window.location.href = "../iniciosesion.html";
-        }, 3000);
+        }, 2000);
     }
 }
 
