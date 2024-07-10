@@ -131,7 +131,7 @@ function validateForm(event) {
         formType.classList.remove("is-valid");
         formDescription.classList.remove("is-valid");
     }
-
+    
 }
 function sendData() {
     const promise = fetch('../../JSONS/productos.json', { method: 'GET' });
@@ -200,3 +200,4 @@ function getData() {
 if (!localStorage.getItem('productos')) {
     getData();
 }
+

@@ -114,7 +114,7 @@ btnAna.addEventListener("click", function (event) {
     }
 });
 
-btnBrian.addEventListener("click", function (event) {
+/**btnBrian.addEventListener("click", function (event) {
     event.preventDefault();
     if (btnState[6]) {
         brian.innerHTML = `
@@ -128,7 +128,7 @@ btnBrian.addEventListener("click", function (event) {
         //console.log("texto largo");
         btnState[6] = true;
     }
-});
+});*/
 
 btnAlexia.addEventListener("click", function (event) {
     event.preventDefault();
